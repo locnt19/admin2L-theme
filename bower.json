@@ -1,0 +1,17 @@
+{
+  "name": "admin2L-theme",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Loc Thanh <locnt19@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/locnt19/admin2L-theme",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
