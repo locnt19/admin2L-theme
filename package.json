@@ -16,5 +16,27 @@
   "bugs": {
     "url": "https://github.com/locnt19/admin2L-theme/issues"
   },
-  "homepage": "https://github.com/locnt19/admin2L-theme#readme"
+  "homepage": "https://github.com/locnt19/admin2L-theme#readme",
+  "dependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/register": "^7.4.4",
+    "autoprefixer": "^9.6.0",
+    "browser-sync": "^2.26.7",
+    "css-declaration-sorter": "^4.0.1",
+    "cssnano": "^4.1.10",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-unicode": "^1.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-terser": "^1.1.7"
+  }
 }
