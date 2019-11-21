@@ -13,5 +13,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "metro": "^4.3.3",
+    "mdi": "^4.5.95"
+  }
 }
