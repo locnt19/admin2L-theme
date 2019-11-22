@@ -1,0 +1,21 @@
+block var
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		link(rel="stylesheet" href="./css/libraries-ui.min.css")
+		link(rel="stylesheet" href="./css/all.min.css")
+		title #{title}
+	body
+		main(data-role='navview' data-compact='fs' data-expand='lg' data-active-state='true')
+			include ../partials/sidebar/_sidebar.pug
+			.navview-content
+				block header
+					include ../partials/header/_header.pug
+				block main-content
+		block footer
+	script(src="./js/libraries-ui.min.js")
+	script(src="./js/all.min.js")

@@ -7,6 +7,7 @@ const
   babel = require('gulp-babel'),
   uglify = require('gulp-terser'),
   rename = require('gulp-rename'),
+  concat = require('gulp-concat'),
   plumber = require('gulp-plumber'),
   postcss = require('gulp-postcss'),
   prefixer = require('autoprefixer'),
@@ -16,10 +17,25 @@ const
   browserSync = require('browser-sync').create();
 sass.compiler = require('node-sass');
 
+const _librariesUI = require('./src/partials/_libraries-ui');
 
 // Task clean
 gulp.task('clean', function () {
   return del(['./dist']);
+})
+
+// Task Font icons
+gulp.task('font-icons', function () {
+	return gulp.src(_librariesUI.fonts)
+		.pipe(gulp.dest('./dist/fonts'));
+})
+gulp.task('font-mif', function () {
+	return gulp.src('bower_components/metro/build/mif/*')
+		.pipe(gulp.dest('./dist/mif'));
+})
+gulp.task('font-flag', function () {
+	return gulp.src('bower_components/flag-icon-css/flags/**/*')
+		.pipe(gulp.dest('./dist/flags'));
 })
 
 // Task JS
@@ -42,10 +58,45 @@ gulp.task('js', function () {
     }));
 });
 
+// Task Libraries UI JS
+gulp.task('library:js', function () {
+	return gulp.src(_librariesUI.scripts, {
+			allowEmpty: true
+		})
+		.pipe(concat('libraries-ui.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('./dist/js'))
+		.pipe(browserSync.reload({
+			stream: true
+		}))
+})
+
+// Task Libraries UI CSS
+gulp.task('library:css', function () {
+  return gulp.src(_librariesUI.styles, {
+      allowEmpty: true,
+    })
+    .pipe(concat('libraries-ui.min.css'))
+    .pipe(postcss([
+      prefixer({
+        cascade: false,
+      }),
+      cssnano(),
+      cssDeclarationSorter({
+        order: 'smacss'
+      })
+    ]))
+    .pipe(gulp.dest('./dist/css'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
 // Task CSS
 gulp.task('css', function () {
   return gulp.src([
-      './src/components/**/*.sass',
+      './src/partials/**/*.sass',
+      '!./src/partials/**/\_*.sass',
     ], {
       allowEmpty: true
     })
@@ -74,8 +125,8 @@ gulp.task('css', function () {
 // Task compile HTML
 gulp.task('html', function () {
   return gulp.src([
-      './src/views/*.pug',
-      '!./src/views/\_*.pug'
+      './src/pages/*.pug',
+      '!./src/pages/\_*.pug'
     ])
     .pipe(pug({
       pretty: '\t',
@@ -97,12 +148,13 @@ gulp.task('serve', function () {
       port: 8000
     }),
     gulp.watch([
-        './src/views/**/*.pug',
+        './src/pages/**/*.pug',
+        './src/partials/**/*.pug',
       ],
       gulp.series('html')
     ),
     gulp.watch([
-        './src/components/**/*.sass',
+        './src/partials/**/*.sass',
       ],
       gulp.series('css')
     ),
@@ -118,6 +170,11 @@ gulp.task('serve', function () {
 gulp.task('default', gulp.series(
   'clean',
   'html',
+  'font-icons',
+  'font-mif',
+  'font-flag',
+  'library:css',
+  'library:js',
   'css',
   'js',
   'serve'

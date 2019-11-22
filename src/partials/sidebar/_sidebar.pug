@@ -1,0 +1,60 @@
+nav.navview-pane
+	button.pull-button
+		span.mif-menu
+	.suggest-box
+		input(type='text' data-role='input' data-clear-button='false' data-search-button='true')
+		button.holder
+			span.mif-search
+	ul.navview-menu
+		li
+			a(href='#')
+				span.icon
+					span.mif-home
+				span.caption Home
+		li.item-separator
+		li.item-header Main pages
+		li
+			a(href='#')
+				span.icon
+					span.mif-apps
+				span.caption Apps
+		li.active
+			a(href='#')
+				span.icon
+					span.mif-gamepad
+				span.caption Games
+		li
+			a(href='#')
+				span.icon
+					span.mif-envelop
+				span.caption Email
+				.badges
+					span.badge.inline 10
+					span.badge.inline 5
+		li
+			a.dropdown-toggle(href='#')
+				span.icon
+					span.mif-music
+				span.caption Music
+			ul.navview-menu(data-role='dropdown')
+				li
+					a(href='#')
+						span.icon
+							span.mif-gamepad
+						span.caption Games
+				li
+					a(href='#')
+						span.icon
+							span.mif-film
+						span.caption Movies
+		li.disabled
+			a(href='#')
+				span.icon
+					span.mif-images
+				span.caption Images
+		li.item-separator
+		li
+			a(href='#')
+				span.icon
+					span.mif-folder
+				span.caption Documents
