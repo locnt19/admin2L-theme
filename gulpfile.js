@@ -24,18 +24,20 @@ gulp.task('clean', function () {
   return del(['./dist']);
 })
 
-// Task Font icons
-gulp.task('font-icons', function () {
-	return gulp.src(_librariesUI.fonts)
-		.pipe(gulp.dest('./dist/fonts'));
-})
-gulp.task('font-mif', function () {
-	return gulp.src('bower_components/metro/build/mif/*')
-		.pipe(gulp.dest('./dist/mif'));
-})
-gulp.task('font-flag', function () {
-	return gulp.src('bower_components/flag-icon-css/flags/**/*')
-		.pipe(gulp.dest('./dist/flags'));
+// Public Something
+gulp.task('public', function (done) {
+  // Font icons
+  gulp.src(_librariesUI.fonts).pipe(gulp.dest('./dist/fonts'))
+  gulp.src('bower_components/metro/build/mif/*').pipe(gulp.dest('./dist/mif'))
+  gulp.src('bower_components/flag-icon-css/flags/**/*').pipe(gulp.dest('./dist/flags'))
+
+  // ChartJS
+  gulp.src('bower_components/chart.js/dist/Chart.min.css').pipe(gulp.dest('./dist/css'));
+  gulp.src('bower_components/chart.js/dist/Chart.min.js').pipe(gulp.dest('./dist/js'));
+
+  // Fake data in Table HTML
+  gulp.src('src/partials/tables/table-100k.json').pipe(gulp.dest('./dist/db'));
+  done();
 })
 
 // Task JS
@@ -60,15 +62,15 @@ gulp.task('js', function () {
 
 // Task Libraries UI JS
 gulp.task('library:js', function () {
-	return gulp.src(_librariesUI.scripts, {
-			allowEmpty: true
-		})
-		.pipe(concat('libraries-ui.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('./dist/js'))
-		.pipe(browserSync.reload({
-			stream: true
-		}))
+  return gulp.src(_librariesUI.scripts, {
+      allowEmpty: true
+    })
+    .pipe(concat('libraries-ui.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 })
 
 // Task Libraries UI CSS
@@ -162,19 +164,16 @@ gulp.task('serve', function () {
         './src/scripts/**/*.js',
       ],
       gulp.series('js')
-    ),
-    gulp.watch('./dist/*').on('change', browserSync.reload)
+    ).on('change', browserSync.reload)
 })
 
 // Gulp task defaul
 gulp.task('default', gulp.series(
   'clean',
-  'html',
-  'font-icons',
-  'font-mif',
-  'font-flag',
+  'public',
   'library:css',
   'library:js',
+  'html',
   'css',
   'js',
   'serve'
