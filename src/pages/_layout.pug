@@ -9,7 +9,7 @@ html(lang="en")
 		link(rel="stylesheet" href="./css/libraries-ui.min.css")
 		link(rel="stylesheet" href="./css/all.min.css")
 		title #{title}
-		
+		block link
 	body
 		main(data-role='navview' data-compact='fs' data-expand='xl' data-active-state='true')
 			include ../partials/navview-pane/_navview-pane.pug
@@ -18,6 +18,6 @@ html(lang="en")
 					include ../partials/header/_header.pug
 				block main-content
 		block footer
-	block script
 	script(src="./js/libraries-ui.min.js")
 	script(src="./js/all.min.js")
+	block script
