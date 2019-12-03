@@ -35,8 +35,6 @@ gulp.task('public', function (done) {
   gulp.src('bower_components/chart.js/dist/Chart.min.css').pipe(gulp.dest('./dist/css'));
   gulp.src('bower_components/chart.js/dist/Chart.min.js').pipe(gulp.dest('./dist/js'));
 
-  // Fake data in Table HTML
-  gulp.src('src/partials/tables/table-100k.json').pipe(gulp.dest('./dist/db'));
   done();
 })
 

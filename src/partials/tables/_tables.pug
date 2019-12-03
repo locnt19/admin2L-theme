@@ -1,0 +1,166 @@
+
+.template_table
+	.template_table--top
+		.info-wrapper
+		.search-wrapper
+	.template_table--fitler.p-4.mt-3.border.bd-default
+		label.switch
+			input(
+				type="checkbox"
+				data-role="switch"
+				data-caption="Thiếu thông tin"
+				onclick="setFilter('filterThieuThongTin', this.checked)" 
+			)
+		label.switch
+			input(
+				type="checkbox"
+				data-role="switch"
+				data-caption="Đủ thông tin"
+				onclick="setFilter('filterDuThongTin', this.checked)" 
+			)
+	table.table.row-border.row-hover(
+		id="template_table"
+		data-role="table"
+		data-show-search="true"
+		data-check="true"
+		data-check-style="2"
+		data-check-name="_id"
+		data-rows-steps="10, -1, 25, 50, 100"
+		data-rows="1"
+		data-rownum="true"
+		data-pagination="true"
+		data-on-draw-cell="drawCell"
+		data-table-rows-count-title="Hiển thị:"
+		data-table-search-title="Tìm kiếm:"
+		data-pagination-short-mode="true"
+		data-table-info-title="Hiển thị từ $1 đến $2 trong $3 đơn hàng"
+		data-all-records-title="Tất cả"
+		data-info-wrapper=".info-wrapper"
+		data-pagination-wrapper=".pagination-wrapper"
+		data-search-wrapper=".search-wrapper"
+		data-rows-wrapper=".rows-wrapper"
+		data-horizontal-scroll="true"
+	)
+		thead
+			tr
+				th(
+					class="sortable-column"
+					data-name="cong_viec"
+				) Công việc
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-name="dia_chi"
+				) Địa chỉ
+				th(
+					class="sortable-column"
+					data-size="140"
+					data-format="date"
+					data-name="thoi_gian_lam"
+				) Thời gian làm
+				th(
+					class="sortable-column"
+					data-size="160"
+					data-format="money"
+					data-name="luong_co_ban"
+				) Lương cơ bản (Yên)
+				th(
+					class="sortable-column"
+					data-size="140"
+					data-name=""
+				) Phí phải trừ
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-format="date"
+					data-name="ngay_tuyen"
+				) Ngày tuyển
+				th(
+					class="sortable-column"
+					data-size="140"
+					data-format="number"
+					data-name="so_luong"
+				) Số lượng tuyển
+				th(
+					class="sortable-column"
+					data-size="140"
+					data-format="date"
+					data-name="xuat_canh"
+				) Xuất cảnh (dự kiến)
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-name="trinh_do"
+				) Trình độ
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-name="yeu_cau_khac"
+				) Yêu cầu khác
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-format="number"
+					data-name="do_tuoi"
+				) Độ tuổi
+				th(
+					class="sortable-column"
+					data-name="status"
+					data-size="100"
+				) Trạng thái
+				th
+		tbody
+			tr
+				td Cơ khí
+				td Kyoto
+				td 18/10/2020
+				td 123456789
+				td Bảo hiểm + Thuế
+				td 26/11/2019
+				td 10
+				td 20/01/2020
+				td N3
+				td Không
+				td 41
+				td
+					code.bg-red.fg-white Thiếu thông tin
+				td
+					span.edit
+					span.delete
+			tr
+				td Nông sản
+				td Hiroshima
+				td 22/01/2020
+				td XCV Yên
+				td Bảo hiểm + Thuế
+				td 20/11/2019
+				td 18
+				td 20/01/2020
+				td N2
+				td Không
+				td 12
+				td
+					code.bg-cyan.fg-white Đủ thông tin
+				td
+					span.edit
+					span.delete
+			tr
+				td Điều dưỡng
+				td Tokyo
+				td 22/01/2020
+				td 123456789
+				td Bảo hiểm + Thuế
+				td 30/11/2019
+				td 10
+				td 29/01/2020
+				td N4
+				td Không
+				td 20
+				td
+					code.bg-cyan.fg-white Đủ thông tin
+				td
+					span.edit
+					span.delete
+	.template_table--bottom
+		.pagination-wrapper
+		.rows-wrapper

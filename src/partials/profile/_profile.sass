@@ -1,0 +1,27 @@
+.template_profile
+	[class*=col-], .col
+		padding: .5rem 1rem
+	label
+		white-space: nowrap
+	&--title
+		margin-top: 0
+	&--language_row
+		+ .template_profile--language_row
+			margin-top: 1rem
+	.box_avatar
+		padding: 1rem
+		text-align: center
+		border-radius: .5rem
+		border: 1px solid #e5e5e5
+		img
+			max-width: 300px
+			width: 100%
+	@media screen and ( min-width: 576px )
+		&--language_row
+			display: flex
+			align-items: flex-start
+			.item
+				padding: .5rem 1rem
+				&:nth-of-type(1)
+					flex: 0 0 200px
+					max-width: 200px

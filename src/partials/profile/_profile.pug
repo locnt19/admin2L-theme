@@ -1,0 +1,630 @@
+//- data-interactive-check="true"
+
+form(
+	class="template_profile grid"
+	data-role="validator"
+	action="javascript:"
+)
+	.col-12
+		button(type="reset").button Điền lại
+		button.button.primary Cập nhật
+	//- ==== THONG TIN CO BAN ====
+	.row
+		.col-lg-2
+			.box_avatar
+				img(src="https://via.placeholder.com/300x400" alt="3x4")
+		.col-lg
+			h4.template_profile--title Thông tin cơ bản
+			.row
+				.col-md-3
+					label Họ và tên
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-md-3
+					label Ngày sinh
+					input(
+						type="text"
+						data-role="calendarpicker"
+						data-cls-calendar="compact"
+						data-week-start="1"
+						data-dialog-point="300"
+						data-show-header="false"
+						data-format="%d-%m-%Y"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng chọn
+				.col-md-3
+					label Nơi sinh
+					input(
+						type="text"
+						data-role="calendarpicker"
+						data-cls-calendar="compact"
+						data-week-start="1"
+						data-dialog-point="300"
+						data-show-header="false"
+						data-format="%d-%m-%Y"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-md-3
+					label Địa chỉ hộ khẩu
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-md-3
+					label Miền
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+							data-validate="required"
+						)
+						option Bắc
+						option Trung
+						option Nam
+					.invalid_feedback Vui lòng chọn
+				.col-md-3
+					label Tỉnh thành
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+						)
+						option Hồ Chí Minh
+						option Bà Rịa Vũng Tàu
+						option Hà Nội
+					.invalid_feedback Vui lòng chọn
+				.col-sm-4.col-md-3
+					label Điện thoại
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-sm-4.col-md-3
+					label ĐT người thân
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-sm-4.col-md-3
+					label Giới tính
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+						)
+						option Nam
+						option Nữ
+					.invalid_feedback Vui lòng chọn
+				.col-sm-4.col-md-3
+					label Hôn nhân
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+						)
+						option Độc thân
+						option Kết hôn
+					.invalid_feedback Vui lòng chọn
+				.col-sm-4.col-md-3
+					label Bệnh án
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-sm-4.col-md-3
+					label Tôn giáo
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+						)
+						option Không
+						option Phật giáo
+						option Thiên chúa
+						option Tin lành
+					.invalid_feedback Vui lòng chọn
+				.col-sm-4.col-md
+					label Chiều cao
+					input(
+						type="text"
+						data-role="input"
+						data-append="cm"
+						data-validate="required number"
+					)
+					.invalid_feedback Vui lòng nhập số
+				.col-sm-4.col-md
+					label Cân nặng
+					input(
+						type="text"
+						data-role="input"
+						data-append="kg"
+						data-validate="required number"
+					)
+					.invalid_feedback Vui lòng nhập số
+				.col-sm-4.col-md
+					label Nhóm máu
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+						)
+						option A
+						option B
+						option AB
+						option O
+					.invalid_feedback Vui lòng chọn
+				.col-sm-4.col-md
+					label Thị lực (trái)
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required number"
+					)
+					.invalid_feedback Vui lòng nhập số
+				.col-sm-4.col-md
+					label Thị lực (phải)
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required number"
+					)
+					.invalid_feedback Vui lòng nhập số
+
+	//- ==== TAY THUAN ====
+	.row
+		.col-12
+			h4 Tay thuận
+			.row
+				.col-12.col-sm
+					label Công việc
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+							data-validate="required"
+						)
+						option Trái
+						option Phải
+						option 2 tay
+					.invalid_feedback Vui lòng chọn
+				.col-12.col-sm
+					label Đũa
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+							data-validate="required"
+						)
+						option Trái
+						option Phải
+						option 2 tay
+					.invalid_feedback Vui lòng chọn
+				.col-12.col-sm
+					label Dao / Kéo
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+							data-validate="required"
+						)
+						option Trái
+						option Phải
+						option 2 tay
+					.invalid_feedback Vui lòng chọn
+				.col-12.col-sm
+					label Viết
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+							data-validate="required"
+						)
+						option Trái
+						option Phải
+						option 2 tay
+					.invalid_feedback Vui lòng chọn
+
+	//- ==== HOC TAP ====
+	.row
+		.col-12
+			h4 Học tập
+			.row
+				.col
+					label Thời gian bắt đầu
+					input(
+						data-role="datepicker"
+						data-day="false"
+					)
+				.col
+					label Thời gian kết thúc
+					input(
+						data-role="datepicker"
+						data-day="false"
+					)
+				.col
+					label Tên trường
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col
+					label Địa chỉ trường
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-auto
+					div &nbsp;
+					button.button.square.alert
+						span.mdi.mdi-trash-can-outline
+			.row
+				.col
+					label Thời gian bắt đầu
+					input(
+						data-role="datepicker"
+						data-day="false"
+					)
+				.col
+					label Thời gian kết thúc
+					input(
+						data-role="datepicker"
+						data-day="false"
+					)
+				.col
+					label Tên trường
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col
+					label Địa chỉ trường
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-auto
+					div &nbsp;
+					button.button.square.primary
+						span.mdi.mdi-plus
+
+	//- ==== KINH NGHIEM LAM VIEC ====
+	.row
+		.col-12
+			h4 Kinh nghiệm làm việc
+			.row
+				.col-fs-12.col-sm
+					label Thời gian bắt đầu
+					input(
+						data-role="datepicker"
+						data-day="false"
+					)
+				.col-fs-12.col-sm
+					label Thời gian kết thúc
+					input(
+						data-role="datepicker"
+						data-day="false"
+					)
+				.col-fs-12.col-sm
+					label Tên trường
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-fs-12.col-sm
+					label Địa chỉ trường
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-auto
+					div &nbsp;
+					button.button.square.alert
+						span.mdi.mdi-trash-can-outline
+			.row
+				.col
+					label Thời gian bắt đầu
+					input(
+						data-role="datepicker"
+						data-day="false"
+					)
+				.col
+					label Thời gian kết thúc
+					input(
+						data-role="datepicker"
+						data-day="false"
+					)
+				.col
+					label Tên trường
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col
+					label Địa chỉ trường
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-auto
+					div &nbsp;
+					button.button.square.primary
+						span.mdi.mdi-plus
+	
+	//- ==== NGOAI NGU ====
+	.row
+		.col-12
+			h4 Ngoại ngữ
+			.template_profile--language_row
+				.item
+					label Ngôn ngữ
+					select(
+						data-role="select"
+						data-filter="false"
+					)
+						option Không
+						option Tiếng Anh
+						option(selected) Tiếng Nhật
+						option Tiếng Trung
+				.item
+					label Bậc
+					input(
+						type="text"
+						value= "N3"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.item
+					div &nbsp;
+					button.button.square.alert
+						span.mdi.mdi-trash-can-outline
+			.template_profile--language_row
+				.item
+					label Ngôn ngữ
+					select(
+						data-role="select"
+						data-filter="false"
+					)
+						option Không
+						option Tiếng Anh
+						option Tiếng Nhật
+						option Tiếng Trung
+				.item
+					label Bậc
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.item
+					div &nbsp;
+					button.button.square.primary
+						span.mdi.mdi-plus
+
+	//- ==== MUC TIEU ====
+	.row
+		.col-12
+			h4 Mục tiêu
+			.row
+				.col-12.col-sm-6
+					label Mục đích khi đi Nhật
+					textarea(data-role="textarea")
+				.col-12.col-sm-6
+					label Mục đích khi về Nước
+					textarea(data-role="textarea")
+	//- ==== KHAC ====
+	.row
+		.col-12
+			h4 Khác
+			.row
+				.col-12.col-sm-6
+					label Sở thích
+					textarea(data-role="textarea")
+				.col-12.col-sm-6
+					label Điểm mạnh
+					textarea(data-role="textarea")
+	//- ==== GIA DINH ====
+	.row
+		.col-12
+			h4 Gia đình
+			.row
+				.col-12.col-sm-6.col-lg
+					label Quan hệ
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+							data-validate="required"
+						)
+						option Cha / Mẹ
+						option Anh / Chị / Em
+						option Cô / Chú / Bác
+					.invalid_feedback Vui lòng chọn
+				.col-12.col-sm-6.col-lg
+					label Họ tên
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-12.col-sm-6.col-lg
+					label Năm sinh
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				
+				.col-12.col-sm-6.col-lg
+					label Công việc
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				
+				.col-12.col-sm-6.col-lg
+					label Nơi làm việc
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				
+				.col-12.col-sm-6.col-lg
+					label Thu nhập
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-auto
+					div &nbsp;
+					button.button.square.alert
+						span.mdi.mdi-trash-can-outline
+			.row
+				.col-12.col-sm-6.col-lg
+					label Quan hệ
+					select(
+						data-role="select"
+						data-filter="false"
+						data-validate="required not=-1"
+					)
+						option(
+							value="-1"
+							class="d-none"
+							data-validate="required"
+						)
+						option Vợ / Chồng
+						option Con
+						option Cha / Mẹ
+						option Anh / Chị / Em
+						option Cô / Chú / Bác
+					.invalid_feedback Vui lòng chọn
+				.col-12.col-sm-6.col-lg
+					label Họ tên
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-12.col-sm-6.col-lg
+					label Năm sinh
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				
+				.col-12.col-sm-6.col-lg
+					label Công việc
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				
+				.col-12.col-sm-6.col-lg
+					label Nơi làm việc
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				
+				.col-12.col-sm-6.col-lg
+					label Thu nhập
+					input(
+						type="text"
+						data-role="input"
+						data-validate="required"
+					)
+					.invalid_feedback Vui lòng nhập
+				.col-auto
+					div &nbsp;
+					button.button.square.primary
+						span.mdi.mdi-plus
