@@ -13,9 +13,7 @@
 # dependencies
 /node_modules
 /bower_components
-/public/fonts/*
-/public/js/libs.js
-/public/css/*
+readme.md
 
 # profiling files
 chrome-profiler-events.json
