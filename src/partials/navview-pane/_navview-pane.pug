@@ -14,10 +14,21 @@ nav.navview-pane
 		li.item-separator
 		li.item-header Template
 		li
-			a(href='tables.html')
+			a.dropdown-toggle
 				span.icon
-					span.mdi.mdi-table-large
-				span.caption Table
+					span.mdi.mdi-table
+				span.caption Đơn hàng
+			ul.navview-menu(data-role='dropdown')
+				li
+					a(href='don_hang-list.html')
+						span.icon
+							span.mdi.mdi-table-search
+						span.caption Danh sách đơn hàng
+				li
+					a(href='don_hang-create.html')
+						span.icon
+							span.mdi.mdi-table-plus
+						span.caption Tạo đơn hàng
 		li.active
 			a(href='forms.html')
 				span.icon

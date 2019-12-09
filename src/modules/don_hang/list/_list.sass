@@ -1,0 +1,76 @@
+.don_hang
+	margin-top: 1rem
+	margin-bottom: 10rem
+	a
+		color: inherit
+		text-decoration: none
+	&--top,
+	&--bottom
+		display: flex
+		flex-direction: column-reverse
+		align-items: flex-start
+	.info-wrapper,
+	.pagination
+		margin-top: 1rem
+	.sortable-column
+		user-select: none
+		&::after
+			content: ''
+	.search-wrapper,
+	.rows-wrapper
+		margin-left: auto
+	.pagination
+		margin-bottom: 0
+	.print,
+	.edit,
+	.delete
+		cursor: pointer
+		display: inline-block
+		font-size: 20px
+		&:before
+			content: ''
+			display: inline-block
+			font-family: 'Material Design Icons'
+			font-size: inherit
+			text-rendering: auto
+			line-height: 1
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+	.print
+		margin-right: .5rem
+		&:before
+			content: '\F166' // mdi-cloud-print-outline
+	.edit
+		color: #0366d6
+		margin-right: .5rem
+		&:before
+			content: '\F3EB' // mdi-pencil
+	.delete
+		color: #CE352C 
+		&:before
+			content: '\FB64' // mdi-delete-circle-outline
+	table
+		th
+			padding-right: 10px !important
+			&[class*=sort-]
+				padding-right: 30px !important
+		th, td
+			&:not(:nth-child(3))
+				text-align: center
+				min-width: 100px
+			&:nth-child(3)
+				min-width: 200px
+			&:nth-child(1),
+			&:nth-child(2)
+				min-width: auto
+		td:last-child
+			white-space: nowrap
+	@media screen and ( min-width: 768px )
+		&--top,
+		&--bottom
+			display: flex
+			flex-direction: row
+			align-items: center
+		.info-wrapper,
+		.pagination
+			margin: 0

@@ -26,6 +26,10 @@ gulp.task('clean', function () {
 
 // Public Something
 gulp.task('public', function (done) {
+
+  // Image
+  gulp.src('src/images/*').pipe(gulp.dest('./dist/images'))
+
   // Font icons
   gulp.src(_librariesUI.fonts).pipe(gulp.dest('./dist/fonts'))
   gulp.src('bower_components/metro/build/mif/*').pipe(gulp.dest('./dist/mif'))
@@ -96,7 +100,9 @@ gulp.task('library:css', function () {
 gulp.task('css', function () {
   return gulp.src([
       './src/partials/**/*.sass',
+      './src/modules/**/*.sass',
       '!./src/partials/**/\_*.sass',
+      '!./src/modules/**/\_*.sass',
     ], {
       allowEmpty: true
     })
@@ -150,11 +156,13 @@ gulp.task('serve', function () {
     gulp.watch([
         './src/pages/**/*.pug',
         './src/partials/**/*.pug',
+        './src/modules/**/*.pug',
       ],
       gulp.series('html')
     ),
     gulp.watch([
         './src/partials/**/*.sass',
+        './src/modules/**/*.sass',
       ],
       gulp.series('css')
     ),

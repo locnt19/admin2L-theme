@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'Danh sách đơn hàng'
+
+block main-content
+	include ../modules/don_hang/list/_list.pug
+
+block script
+	script(src="./js/filterDonHang.min.js")
