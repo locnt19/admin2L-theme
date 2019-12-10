@@ -1,0 +1,12 @@
+extends _layout.pug
+
+block var
+	- var title = 'account_profile-info'
+
+block main-content
+	.container
+		.row
+			.col-lg-7.mx-auto
+				include ../modules/account_profile/navigation/index.pug
+				include ../modules/account_profile/info/index.pug
+block script

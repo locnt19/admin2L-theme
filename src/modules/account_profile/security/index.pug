@@ -1,0 +1,63 @@
+section.account_profile-security
+	.account_profile-security_row.row
+		.account_profile-security_annotation.col-sm-4
+			.alt-header Đổi mật khẩu
+		.account_profile-security_content.col-sm-8
+			.wrapper-content
+				.alt-header Thay đổi mật khẩu của bạn
+				button.button.outline(onclick="Metro.dialog.open('#form-change_password')") Đổi mật khẩu
+				.dialog.dialog-change_password( id="form-change_password" data-role="dialog" data-close-button="true")
+					form(class="form-change_password" data-role="validator")
+						.dialog-title Đổi mật khẩu
+						.dialog-content
+							.form-group_control
+								label Mật khẩu hiện tại
+								input(type="text" data-validate="required")
+								span.invalid_feedback.form-error Mật khẩu không đúng
+							.form-group_control
+								label Mật khẩu mới
+								input(type="text" data-validate="required" name="new_password1")
+							.form-group_control
+								label Xác nhận mật khẩu mới
+								input(type="text" data-validate="required compare=new_password1" name="new_password2")
+								span.invalid_feedback.form-error Mật khẩu xác nhận không trùng khớp. Vui lòng kiểm tra lại
+							.form-group_control.form-group_checkbox
+								label
+									input(type="checkbox" data-role="checkbox")
+									span Chấm dứt các phiên đăng nhập khác
+						.dialog-actions.text-right.p-4
+							.button.js-dialog-close Hủy
+							button.button.primary Cập nhật
+	.account_profile-security_row.row
+		.account_profile-security_annotation.col-sm-4
+			.alt-header
+				p Lịch sử đăng nhập
+				small Lịch sử đăng nhập gần đây, bao gồm trình duyệt, ngày tháng và địa chỉ IP
+			button.button.outline(onclick="Metro.dialog.open('#form-end_session')") Đăng xuất trên toàn bộ thiết bị
+			.dialog.dialog-end_session(id="form-end_session" data-role="dialog" data-close-button="true")
+				.dialog-title Đăng xuất trên toàn bộ thiết bị
+				.dialog-content Đăng xuất trên tất cả các thiết bị khác
+				form.dialog-actions
+					.button.js-dialog-close Hủy
+					button.button.primary Xác nhận
+		.account_profile-security_content.col-sm-8.pt-0
+			.wrapper-content.table-container.horizontal-scroll
+				table.table.row-border.m-0.table-history_login
+					thead
+						tr
+							th Ngày đăng nhập
+							th Browser
+							th IP
+					tbody
+						tr
+							td 07/12/2019 13:51
+							td Chrome 78 on Windows 10
+							td 113.161.81.63
+						tr
+							td 07/12/2019 13:51
+							td Chrome 78 on Windows 10
+							td 113.161.81.63
+						tr
+							td 07/12/2019 13:51
+							td Chrome 78 on Windows 10
+							td 113.161.81.63

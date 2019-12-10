@@ -100,9 +100,7 @@ gulp.task('library:css', function () {
 gulp.task('css', function () {
   return gulp.src([
       './src/partials/**/*.sass',
-      './src/modules/**/*.sass',
-      '!./src/partials/**/\_*.sass',
-      '!./src/modules/**/\_*.sass',
+      './src/modules/**/*.sass'
     ], {
       allowEmpty: true
     })

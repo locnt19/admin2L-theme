@@ -1,0 +1,12 @@
+extends _layout.pug
+
+block var
+	- var title = 'account_profile-security'
+
+block main-content
+	.container
+		.row
+			.col-lg-7.mx-auto
+				include ../modules/account_profile/navigation/index.pug
+				include ../modules/account_profile/security/index.pug
+block script

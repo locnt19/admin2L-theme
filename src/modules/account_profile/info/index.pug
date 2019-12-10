@@ -1,0 +1,66 @@
+section.account_profile-info
+	.account_profile-info_row.row
+		.account_profile-info_annotation.col-sm-4
+			.alt-header Chi tiết
+		.account_profile-info_content.col-sm-8
+			.wrapper-content
+				.form-user_avatar
+					.user_avatar
+						img(src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2019%2F08%2Fg-dragon-peaceminusone-nike-air-force-1-07-paranoise-another-look-1.jpg?q=75&w=800&cbr=1&fit=max" alt="image_avatar").image_avatar
+						span.hrv_avatar 2L
+					.button-group_file
+						form
+							label(
+								for="form-upload_file"
+								class="button outline mb-0"
+							) Tải hình
+							input(
+								id="form-upload_file"
+								class="hidden"
+								type="file"
+								value="Chọn hình"
+							)
+						form
+							button.button.outline Xóa hình
+				.form-user_info
+					.form-success Cập nhật thông tin thành công!
+					.form-error Mật khẩu xác nhận không trùng khớp. Vui lòng kiểm tra lại.
+					form
+						.row
+							.col-sm-6
+								.form-group_control
+									label Tên tổ chức
+									input(type="text" value="admin2L" disabled)
+							.col-sm-6
+								.form-group_control
+									label Họ và tên
+									input(type="text")
+							.col-sm-6
+								.form-group_control
+									label Tên đăng nhập
+									input(type="text" value="username" disabled)
+							.col-sm-6
+								.form-group_control
+									label Số điện thoại
+									input(type="text")
+							.col-sm-12
+								.form-group_control
+									label Ngôn ngữ
+									select(
+										data-role="select"
+										data-filter="false"
+									)
+										option Tiếng Việt
+										option Tiếng Anh
+							.col-sm-12
+								.form-group_control
+									label Quốc gia
+									select(
+										data-role="select"
+										data-filter="false"
+									)
+										option Việt Nam
+										option Nhật Bản
+							.col-12
+								.form-group_control.text-right
+									button.button.primary.rounded.mt-4 Cập nhật
