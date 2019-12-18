@@ -1,0 +1,14 @@
+section.login
+	form(action="/login" method="post")#form-login
+		input(type='hidden', name='_csrf', value=_csrf)
+		h1 login
+		label(for="username") Username
+		.group
+			input(type="text" id="username" name="username" autofocus required)
+			label(for="username").mdi.mdi-account-outline
+		label(for="password") Password
+		.group
+			input(type="password" id="password" name="password" required)
+			label(for="password").mdi.mdi-lock-outline
+		a(href="#") Forgot password?
+		button.btn(type="submit") login

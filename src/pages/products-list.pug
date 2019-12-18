@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'products-list'
+
+block main-content
+	.container
+		include ../modules/products/navigation/index.pug
+		include ../modules/products/list/index.pug
+block script
+	script(src="./js/filterTables.min.js")

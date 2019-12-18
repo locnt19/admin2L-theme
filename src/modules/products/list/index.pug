@@ -1,0 +1,235 @@
+
+.template_table
+	.template_table--top
+		.info-wrapper
+		.search-wrapper
+		.create-wrapper
+			a(href="#").button.primary.ml-4
+				span.mdi.mdi-plus
+				span.ml-2 Tạo sản phẩm
+		.products-export-import
+			button.button.square.ml-4
+				span.mdi.mdi-dots-horizontal
+			ul.d-menu(data-role="dropdown" style="right: 0")
+				li
+					a(href="#" onclick="Metro.dialog.open('#dialog-products_import')") Nhập dữ liệu
+					.dialog.dialog-products_import( id="dialog-products_import" data-role="dialog" data-close-button="true")
+						.dialog-title Nhập sản phẩm
+						.dialog-content
+							.row
+								.col-sm-4 chọn file
+								.col-sm-8 Chọn dạng file sẽ nhập:
+									.form-group_control
+										label
+											input(type="radio" data-role="radio" name="dialog-import")
+											span Nhập file .csv (Comma Seperated Values)
+									.form-group_control
+										label
+											input(type="radio" data-role="radio" name="dialog-import")
+											span Nhập file .xls (Excel)
+									.form-group_control
+										label
+											input(type="checkbox" data-role="checkbox")
+											span Ghi đè lên sản phẩm đã có trùng link Url
+									.form-divider
+									p Tải dữ liệu mẫu:
+									.form-group_control
+										a(href="#").button.link File csv mẫu
+										a(href="#").button.link File excel mẫu
+						.dialog-actions.text-right.p-4
+							.button.js-dialog-close Hủy
+							button.button.primary(disabled) Nhập dữ liệu
+				li
+					a(href="#" onclick="Metro.dialog.open('#dialog-products_export')") Xuất dữ liệu
+					.dialog.dialog-products_export( id="dialog-products_export" data-role="dialog" data-close-button="true")
+						.dialog-title Xuất sản phẩm
+						.dialog-content
+							.form-group_control
+								label
+									input(type="radio" data-role="radio" name="dialog-export")
+									span Trang hiện tại
+							.form-group_control
+								label
+									input(type="radio" data-role="radio" name="dialog-export")
+									span Tất cả sản phẩm
+							.form-group_control
+								label
+									input(type="radio" data-role="radio" name="dialog-export")
+									span Sản phẩm được chọn
+							.form-group_control
+								label
+									input(type="radio" data-role="radio" name="dialog-export")
+									span Theo bộ lọc hiện tại
+							p Chọn định dạng file sẽ xuất:
+							.form-group_control
+								label
+									input(type="radio" data-role="radio" name="dialog-export")
+									span Xuất file .csv (Comma Seperated Values)
+							.form-group_control
+								label
+									input(type="radio" data-role="radio" name="dialog-export")
+									span Xuất file .xls (Excel)
+						.dialog-actions.text-right.p-4
+							.button.js-dialog-close Hủy
+							button.button.primary Xuất dữ liệu
+	.template_table--fitler.p-4.mt-3.border.bd-default
+		label.switch
+			input(
+				type="checkbox"
+				data-role="switch"
+				data-caption="Thiếu thông tin"
+				onclick="setFilter('filterThieuThongTin', this.checked)"
+			)
+		label.switch
+			input(
+				type="checkbox"
+				data-role="switch"
+				data-caption="Đủ thông tin"
+				onclick="setFilter('filterDuThongTin', this.checked)"
+			)
+	table.table.row-border.row-hover(
+		id="template_table"
+		data-role="table"
+		data-show-search="true"
+		data-check="true"
+		data-check-style="2"
+		data-check-name="_id"
+		data-rows-steps="-1, 10, 25, 50, 100"
+		data-rows="1"
+		data-rownum="true"
+		data-pagination="true"
+		data-on-draw-cell="drawCell"
+		data-table-rows-count-title="Hiển thị:"
+		data-table-search-title="Tìm kiếm:"
+		data-pagination-short-mode="true"
+		data-table-info-title="Hiển thị từ $1 đến $2 trong $3 đơn hàng"
+		data-all-records-title="Tất cả"
+		data-info-wrapper=".info-wrapper"
+		data-pagination-wrapper=".pagination-wrapper"
+		data-search-wrapper=".search-wrapper"
+		data-rows-wrapper=".rows-wrapper"
+		data-horizontal-scroll="true"
+	)
+		thead
+			tr
+				th(
+					class="sortable-column"
+					data-name="cong_viec"
+				) Công việc
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-name="dia_chi"
+				) Địa chỉ
+				th(
+					class="sortable-column"
+					data-size="140"
+					data-format="date"
+					data-name="thoi_gian_lam"
+				) Thời gian làm
+				th(
+					class="sortable-column"
+					data-size="160"
+					data-format="money"
+					data-name="luong_co_ban"
+				) Lương cơ bản (Yên)
+				th(
+					class="sortable-column"
+					data-size="140"
+					data-name=""
+				) Phí phải trừ
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-format="date"
+					data-name="ngay_tuyen"
+				) Ngày tuyển
+				th(
+					class="sortable-column"
+					data-size="140"
+					data-format="number"
+					data-name="so_luong"
+				) Số lượng tuyển
+				th(
+					class="sortable-column"
+					data-size="140"
+					data-format="date"
+					data-name="xuat_canh"
+				) Xuất cảnh (dự kiến)
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-name="trinh_do"
+				) Trình độ
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-name="yeu_cau_khac"
+				) Yêu cầu khác
+				th(
+					class="sortable-column"
+					data-size="100"
+					data-format="number"
+					data-name="do_tuoi"
+				) Độ tuổi
+				th(
+					class="sortable-column"
+					data-name="status"
+					data-size="100"
+				) Trạng thái
+				th
+		tbody
+			tr
+				td Cơ khí
+				td Kyoto
+				td 18/10/2020
+				td 123456789
+				td Bảo hiểm + Thuế
+				td 26/11/2019
+				td 10
+				td 20/01/2020
+				td N3
+				td Không
+				td 41
+				td
+					code.bg-red.fg-white Thiếu thông tin
+				td
+					span.edit
+					span.delete
+			tr
+				td Nông sản
+				td Hiroshima
+				td 22/01/2020
+				td XCV Yên
+				td Bảo hiểm + Thuế
+				td 20/11/2019
+				td 18
+				td 20/01/2020
+				td N2
+				td Không
+				td 12
+				td
+					code.bg-cyan.fg-white Đủ thông tin
+				td
+					span.edit
+					span.delete
+			tr
+				td Điều dưỡng
+				td Tokyo
+				td 22/01/2020
+				td 123456789
+				td Bảo hiểm + Thuế
+				td 30/11/2019
+				td 10
+				td 29/01/2020
+				td N4
+				td Không
+				td 20
+				td
+					code.bg-cyan.fg-white Đủ thông tin
+				td
+					span.edit
+					span.delete
+	.template_table--bottom
+		.pagination-wrapper
+		.rows-wrapper
