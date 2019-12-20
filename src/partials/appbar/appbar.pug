@@ -1,0 +1,48 @@
+section.appbar_wrapper.pos-absolute(data-role='appbar')
+	a#paneToggle.app-bar-item.d-block.d-none-lg(href='#')
+		span.mdi.mdi-menu
+	.app-bar-container.ml-auto
+		a.app-bar-item(href='#')
+			span.mif-envelop
+			span.badge.bg-green.fg-white.mt-2.mr-1 4
+		.app-bar-container
+			a.app-bar-item(href='#')
+				span.mif-bell
+				span.badge.bg-orange.fg-white.mt-2.mr-1 10
+			.pos-absolute.put-sw.mt-1.shadow-1(data-role='collapse' data-collapsed='true' style="line-height: 1.5")
+				ul.feed-list.p-0(style="width: 200px")
+					li.title.px-4.h-auto Notifications
+					li.px-4.py-2.h-auto
+						a(href="#")
+							.label Lorem ipsum dolor sit amet.
+							.second-label 10 min ago
+					li.px-4.py-2.h-auto
+						a(href="#")
+							.label Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+							.second-label 10 min ago
+					li.px-4.py-2.h-auto
+						a(href="#")
+							.label Lorem ipsum dolor sit amet.
+							.second-label 10 min ago
+					li.px-4.py-2.h-auto.text-center
+						a(href="#") View all
+		a.app-bar-item(href='#')
+			span.mif-flag
+			span.badge.bg-red.fg-white.mt-2.mr-1 9
+		.app-bar-container
+			a.app-bar-item(href='#')
+				img.appbar_avatar-thumb(src='https://via.placeholder.com/32')
+				span.ml-2.d-none.d-block-sm Loc Thanh
+			.pos-absolute.put-se.mt-1.shadow-1(data-role='collapse' data-collapsed='true' style="line-height: 1.5")
+				.bg-lightBlue.fg-white.p-2.text-center
+					img.appbar_avatar(src='https://via.placeholder.com/64')
+					a(href="#").d-block.h4.mt-2.mb-0 Loc Thanh
+					span admin
+				.bg-white.d-flex.flex-justify-between.p-2
+					button.button.flat-button Profile
+					button.button.flat-button Activity log
+				.bg-white.d-flex.flex-justify-between.flex-equal-items.p-2.bg-light
+					button.button.mr-1 Settings
+					button.button.ml-1 Sign out
+		a.app-bar-item(href='#')
+			span.mif-cogs

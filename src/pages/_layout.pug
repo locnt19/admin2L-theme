@@ -10,14 +10,13 @@ html(lang="en")
 		link(rel="stylesheet" href="./css/all.min.css")
 		title #{title}
 		block link
-	body
-		main(data-role='navview' data-compact='fs' data-expand='xl' data-active-state='true')
-			include ../partials/navview-pane/_navview-pane.pug
-			.navview-content
-				block header
-					include ../partials/header/_header.pug
+	body.m4-cloak.h-vh-100
+		.notify-container
+		main(class="navview" data-role="navview" data-toggle="#paneToggle" data-expanded="xl" data-compact="lg" data-active-state="true")
+			include ../partials/sidebar/sidebar.pug
+			section.navview-content
+				include ../partials/appbar/appbar.pug
 				block main-content
-		block footer
-	script(src="./js/libraries-ui.min.js")
-	script(src="./js/all.min.js")
-	block script
+		script(src="./js/libraries-ui.min.js")
+		script(src="./js/all.min.js")
+		block script
