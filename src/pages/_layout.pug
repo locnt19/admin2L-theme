@@ -16,7 +16,15 @@ html(lang="en")
 			include ../partials/sidebar/sidebar.pug
 			section.navview-content
 				include ../partials/appbar/appbar.pug
-				block main-content
+				section.content_wrapper.bg-light
+					aside.container
+						.row.border-bottom.bd-lightGray.mt-4
+							.col-md-4.text-center.text-left-md
+								h3.content_title.m-0 Admin2L 
+									small version 2.0
+							.col-md-8.d-flex.flex-justify-center.flex-justify-end-md
+								include ../partials/breadcrumbs/breadcrumbs.pug
+						block content-wrapper
 		script(src="./js/libraries-ui.min.js")
 		script(src="./js/all.min.js")
 		block script

@@ -1,0 +1,132 @@
+section.dashboard_wrapper
+	aside.dashboard_general
+		.row
+			.col-sm-6.col-xl-3
+				.icon-box.border.bd-blue.h-auto
+					.icon.bg-blue.fg-white
+						span.mif-embed2(style="transform: translateX(-5px)")
+					.content.p-4
+						.text-upper.text-medium code read book
+						.text-upper.text-bold.text-lead.mt-2 99+
+			.col-sm-6.col-xl-3
+				.icon-box.border.bd-yellow.h-auto
+					.icon.bg-yellow.fg-grayMouse
+						span.mif-books
+					.content.p-4
+						.text-upper.text-medium Books
+						.text-upper.text-bold.text-lead.mt-2 1234+
+			.col-sm-6.col-xl-3
+				.icon-box.border.bd-emerald.h-auto
+					.icon.bg-emerald.fg-white
+						span.mif-enter
+					.content.p-4
+						.text-upper.text-medium Visitor
+						.text-upper.text-bold.text-lead.mt-2 1234+
+			.col-sm-6.col-xl-3
+				.icon-box.border.bd-crimson.h-auto
+					.icon.bg-crimson.fg-white
+						span.mif-users
+					.content.p-4
+						.text-upper.text-medium Users
+						.text-upper.text-bold.text-lead.mt-2 1234+
+		.row
+			.col-sm-6.col-xl-3
+				.more-info-box.bg-crimson.fg-white
+					.content
+						h2.text-bold.mb-0 90
+						div Code is available
+					.icon
+						span.mif-barcode
+					a(href="#").more More info 
+						span.mif-arrow-right
+			.col-sm-6.col-xl-3
+				.more-info-box.bg-emerald.fg-white
+					.content
+						h2.text-bold.mb-0 49%
+						div Bounce Rate
+					.icon
+						span.mif-chart-dots
+					a(href="#").more More info 
+						span.mif-arrow-right
+			.col-sm-6.col-xl-3
+				.more-info-box.bg-yellow.fg-grayMouse
+					.content
+						h2.text-bold.mb-0 19
+						div New Registrations
+					.icon
+						span.mif-chart-bars
+					a(href="#").more.fg-grayMouse More info 
+						span.mif-arrow-right
+			.col-sm-6.col-xl-3
+				.more-info-box.bg-blue.fg-white
+					.content
+						h2.text-bold.mb-0 1868
+						div Unique Visitors
+					.icon
+						span.mif-user-plus
+					a(href="#").more More info 
+						span.mif-arrow-right
+	aside.dashboard_report
+		div.grid(data-role="panel" data-title-caption="Monthly report" data-collapsible="true" data-title-icon="<span class='mif-chart-line'></span>")
+			.row
+				.col-xl-8.px-4.pb-4.pt-0
+					h5.text-center Book views: 1 Dec, 2019 - 31 Dec, 2019
+					canvas#dashboard_report-monthly
+				.col-xl-4.px-4.pb-4.pt-0
+					h5.text-center Goal Completion
+					.mt-4
+						.clear
+							.place-left Add Products to Cart
+							.place-right
+								strong 160
+								span /200
+						div(data-role="progress" data-value="75" data-cls-bar="bg-blue")
+					.mt-4
+						.clear
+							.place-left Complete Purchase
+							.place-right 
+								strong 100
+								span /200
+						div(data-role="progress" data-value="50" data-cls-bar="bg-yellow")
+					.mt-4
+						.clear
+							.place-left Visit Page
+							.place-right 
+								strong 900
+								span /2100
+						div(data-role="progress" data-value="34" data-cls-bar="bg-emerald")
+					.mt-4
+						.clear
+							.place-left Send Inquiries
+							.place-right 
+								strong 456
+								span /500
+						div(data-role="progress" data-value="85" data-cls-bar="bg-crimson")
+				.col-12.border-top.bd-lightGray.my-4
+					.row
+						.col-sm-6.col-md-3.text-center
+							.fg-emerald
+								span.mif-arrow-drop-up
+								span 17%
+							.text-bold.enlarge-2 $35,210.43
+							div TOTAL REVENUE
+						.col-sm-6.col-md-3.text-center
+							.fg-emerald
+								span &nbsp;
+								span.mif-arrow-drop-up
+								span 17%
+							.text-bold.enlarge-2 $10,390.90
+							div TOTAL COST
+						.col-sm-6.col-md-3.text-center
+							.fg-emerald
+								span.mif-arrow-drop-up
+								span 29%
+							.text-bold.enlarge-2 $56,210.43
+							div TOTAL PROFIT
+						.col-sm-6.col-md-3.text-center
+							.fg-crimson
+								span.mif-arrow-drop-down
+								span 15%
+							.text-bold.enlarge-2 135
+							div GOAL COMPLETIONS
+	aside.dashboard_staff

@@ -3,45 +3,5 @@ extends _layout.pug
 block var
 	- var title = 'Dashboard'
 
-//- block link
-//- 	link(rel="stylesheet" href="./css/Chart.min.css")
-
-//- block main-content
-//- 	//- .container-fluid
-//- 	//- 	.row
-//- 	//- 		.col-md-8.col-lg-9.col-xxl-10
-//- 	//- 			.row
-//- 	//- 				include ../partials/statistics/_statistics.pug
-//- 	//- 			.row
-//- 	//- 				.col-lg-8
-//- 	//- 					h4 Tổng kết theo tháng
-//- 	//- 					include ../partials/charts/h-chart/_h-chart.pug
-//- 	//- 				.col-lg-4
-//- 	//- 					h4 Tổng kết theo năm
-//- 	//- 					include ../partials/charts/c-chart/_c-chart.pug
-//- 	//- 			.row
-//- 	//- 				.col-12
-//- 	//- 					include ../partials/charts/maps/_maps.pug
-//- 	//- 		.col-md-4.col-lg-3.col-xxl-2
-//- 	//- 			div
-//- 	//- 				include ../partials/calendar/_calendar.pug
-//- 	//- 			.mt-4
-//- 	//- 				h4 Đang hoạt động
-//- 	//- 				include ../partials/user-active/_user-active.pug
-//- 	//- 			.mt-4
-//- 	//- 				h4 Thông báo
-//- 	//- 				include ../partials/notify-system/_notify-system.pug
-
-//- block script
-//- 	//- amChartJS
-//- 	script(src="//www.amcharts.com/lib/4/core.js")
-//- 	script(src="//www.amcharts.com/lib/4/maps.js")
-//- 	script(src="https://www.amcharts.com/lib/4/geodata/worldUltra.js")
-//- 	script(src="https://www.amcharts.com/lib/4/geodata/vietnamHigh.js")
-//- 	script(src="https://www.amcharts.com/lib/4/geodata/japanHigh.js")
-//- 	script(src="https://www.amcharts.com/lib/4/geodata/usaLow.js")
-//- 	script(src="https://www.amcharts.com/lib/4/themes/animated.js")
-//- 	script(src="./js/chartMap.min.js")
-//- 	//- ChartJS
-//- 	script(src="./js/Chart.min.js")
-//- 	script(src="./js/chChart.min.js")
+block content-wrapper
+	include ../partials/dashboard/dashboard.pug
