@@ -10,7 +10,7 @@ module.exports = {
 	],
 	"scripts": [
 		"bower_components/jquery/dist/jquery.min.js",
-		"bower_components/chart.js/dist/Chart.min.js",
 		"bower_components/metro/build/js/metro.min.js",
+		"bower_components/chart.js/dist/Chart.min.js",
 	],
 }

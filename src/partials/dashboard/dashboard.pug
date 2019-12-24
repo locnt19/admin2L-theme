@@ -129,4 +129,111 @@ section.dashboard_wrapper
 								span 15%
 							.text-bold.enlarge-2 135
 							div GOAL COMPLETIONS
-	aside.dashboard_staff
+	aside.dashboard_block.row
+		.col-xl-7
+			div(data-role="panel" data-title-caption="Staff list" data-collapsible="true" data-title-icon="<span class='mif-users'></span>")
+				.template_table
+					.template_table--top
+						.info-wrapper
+						.search-wrapper
+					table.table.row-border.row-hover(
+						id="template_table"
+						data-role="table"
+						data-show-search="true"
+						data-check="true"
+						data-check-style="2"
+						data-check-name="_id"
+						data-rows-steps="-1, 5, 10, 20"
+						data-rows="5"
+						data-rownum="true"
+						data-pagination="true"
+						data-table-rows-count-title="Show entries:"
+						data-table-search-title="Search:"
+						data-pagination-short-mode="true"
+						data-table-info-title="Showing $1 to $2 of $3 entries"
+						data-all-records-title="All"
+						data-info-wrapper=".info-wrapper"
+						data-pagination-wrapper=".pagination-wrapper"
+						data-search-wrapper=".search-wrapper"
+						data-rows-wrapper=".rows-wrapper"
+						data-horizontal-scroll="true"
+					)
+						thead
+							tr
+								th(
+									class="sortable-column"
+									data-name="_id"
+								) ID
+								th(
+									class="sortable-column"
+									data-name="name"
+								) Name
+								th(
+									class="sortable-column"
+									data-format="date"
+									data-name="birthday"
+								) Birthday
+								th(
+									class="sortable-column"
+									data-format="date"
+									data-name="start"
+								) Start
+								th(
+									class="sortable-column"
+									data-format="number"
+									data-name="age"
+								) Age
+						tbody
+							-for(var i = 0; i < 20; i++)
+								tr
+									if i < 10
+										td stf_0
+											=`${i}`
+									else
+										td stf_
+											=`${i}`
+									td Loc Thanh 
+										=`${i}`
+									td 19/09/1998
+									td 18/10/2020
+									td 22
+					.template_table--bottom
+						.pagination-wrapper
+						.rows-wrapper
+		.col-xl-5
+			div(data-role="panel" data-title-caption="New members" data-collapsible="true" data-title-icon="<span class='mif-users'></span>")
+				ul.user-list
+					li
+						img(src="https://via.placeholder.com/128", alt="https://via.placeholder.com/128").avatar
+						.text-ellipsis Loc Thanh
+						.text-small.text-muted Today
+					li
+						img(src="https://via.placeholder.com/128", alt="https://via.placeholder.com/128").avatar
+						.text-ellipsis Loc Thanh
+						.text-small.text-muted Yesterday
+					li
+						img(src="https://via.placeholder.com/128", alt="https://via.placeholder.com/128").avatar
+						.text-ellipsis Loc Thanh
+						.text-small.text-muted Yesterday
+					li
+						img(src="https://via.placeholder.com/128", alt="https://via.placeholder.com/128").avatar
+						.text-ellipsis Loc Thanh
+						.text-small.text-muted 21 Dec
+					li
+						img(src="https://via.placeholder.com/128", alt="https://via.placeholder.com/128").avatar
+						.text-ellipsis Loc Thanh
+						.text-small.text-muted 21 Dec
+					li
+						img(src="https://via.placeholder.com/128", alt="https://via.placeholder.com/128").avatar
+						.text-ellipsis Loc Thanh
+						.text-small.text-muted 19 Dec
+					li
+						img(src="https://via.placeholder.com/128", alt="https://via.placeholder.com/128").avatar
+						.text-ellipsis Loc Thanh
+						.text-small.text-muted 19 Sep
+					li
+						img(src="https://via.placeholder.com/128", alt="https://via.placeholder.com/128").avatar
+						.text-ellipsis Loc Thanh
+						.text-small.text-muted 18 Nov
+				.border-top.bd-default.text-center
+					a(href="#") View all users
