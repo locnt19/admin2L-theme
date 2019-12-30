@@ -1,0 +1,98 @@
+aside.forms_basic
+	//- h3 Form 
+	//- 	small basic
+	.row
+		.col-xl-6
+			.bg-white.p-4.mr-2-xl
+				h6 Default input styling
+				div
+					.form-group
+						label Input [text]
+						input(type="text")
+					.form-group
+						label Input [password]
+						input(type="password")
+					.form-group
+						label Select
+						select
+							option value 1
+							option value 2
+							option value 3
+					.form-group
+						label Text area
+						textarea
+					.form-group
+						input(type="submit" value="Submit")
+						input(type="reset" value="Reset")
+						input(type="button" value="Button")
+		.col-xl-6
+			.bg-white.p-4.mt-4.mt-0-xl
+				h6 Disabled inputs
+				div
+					.form-group
+						label Input [text]
+						input(type="text" disabled)
+					.form-group
+						label Input [password]
+						input(type="password" disabled)
+					.form-group
+						label Select
+						select(disabled)
+							option value 1
+							option value 2
+							option value 3
+					.form-group
+						label Text area
+						textarea(disabled)
+					.form-group
+						input(type="submit" value="Submit" disabled)
+						input(type="reset" value="Reset" disabled)
+						input(type="button" value="Button" disabled)
+		.col-xl-6
+			.bg-white.p-4.mt-4.mr-2-xl
+				h6 Accent colors
+				div.row
+					.form-group.col-sm-6
+						label Primary
+						input(type="text").primary
+					.form-group.col-sm-6.mt-0
+						label Secondary
+						input(type="text").secondary
+					.form-group.col-sm-6
+						label Success
+						input(type="text").success
+					.form-group.col-sm-6
+						label Alert
+						input(type="text").alert
+					.form-group.col-sm-6
+						label Warning
+						input(type="text").warning
+					.form-group.col-sm-6
+						label Info
+						input(type="text").info
+					.form-group.col-sm-6
+						label Dark
+						input(type="text").dark
+					.form-group.col-sm-6
+						label Required
+						input(type="text").required
+		.col-xl-6
+			.bg-white.p-4.mt-4
+				h6 Default validating
+				div.custom-validation.need-validation(novalidate)
+					.form-group
+						label First name
+						input(type="text" value="Loc" required)
+					.form-group
+						label Last name
+						input(type="text" value="Thanh" required)
+					.form-group
+						label City
+						input(type="text" placeholder="City" required)
+						.invalid_feedback Please provide a valid city.
+					.form-group
+						label State
+						input(type="text" placeholder="State" required)
+						.invalid_feedback Please provide a valid state.
+					.form-group
+						button.button.primary Submit

@@ -2,6 +2,9 @@ extends _layout.pug
 
 block var
 	- var title = 'Dashboard'
-
+	- var contentTitle = 'Admin2L '
+	- var contentSubTitle = 'version 2.0'
 block content-wrapper
 	include ../partials/dashboard/dashboard.pug
+block script
+	script(src="./js/chartDashboard.min.js")

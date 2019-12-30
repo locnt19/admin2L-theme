@@ -1,0 +1,602 @@
+aside.forms_extended
+	h4 Input
+	.row
+		.col-12
+			.bg-white.p-4.mr-2-xl
+				h6 Input[text] data-role="input"
+				.row.flex-align-end
+					.form-group.col-sm-6.mt-0
+						label.text-small Input with clear button
+						input(type="text" data-role="input")
+					.form-group.col-sm-6.mt-0
+						label.text-small Input with default value 100
+						input(type="text" data-role="input" data-default-value="100")
+					.form-group.col-sm-6
+						label.text-small Input without clear button
+						input(type="text" data-role="input" data-clear-button="false")
+					.form-group.col-sm-6
+						label.text-small Custom clear button icon
+						input(type="text" data-role="input" data-clear-button-icon="<span class='mif-cancel'></span>")
+					.form-group.col-sm-6
+						script.
+							var customButtons = [
+								{
+									html: "<span class='mif-user'></span>",
+									cls: "alert",
+									onclick: "alert('You press user button')" 
+								},
+								{
+									html: "<span class='mif-cog'></span>",
+									cls: "warning",
+									onclick: "alert('You press cog button')" 
+								}
+							]
+						label.text-small Input with custom buttons 
+							span.fg-red (Custom buttons must be defined before input)
+						input(type="text" data-role="input" data-clear-button="false" data-custom-buttons="customButtons")
+					.form-group.col-sm-6
+						label.text-small Input with prepend, append 
+							span.fg-blue (You can customize as button)
+						input(type="text" data-role="input" data-prepend="<span class='mif-home'></span>")
+				h6 Input[password] data-role="input"
+				.row.flex-align-end
+					.form-group.col-md-4
+						label.text-small Input[password] with clear and reveal buttons
+						input(type="password" data-role="input")
+					.form-group.col-md-4.mt-4.mt-0-md
+						label.text-small Input[password] without reveal button
+						input(type="password" data-role="input" data-reveal-button="false")
+					.form-group.col-md-4.mt-4.mt-0-md
+						label.text-small Custom reveal button icon
+						input(type="password" data-role="input" data-reveal-button-icon="<span class='mif-lamp mif-2x'></span>")
+				.row
+					.col-xl-6
+						h6 Autocomplete 
+							small (Input[text] data-role="input")
+						div
+							.form-group.mt-4
+								input(type="text" data-role="input" data-autocomplete="Loc, Thanh, Nguyen, Hidan, Sasuke, Naruto, Saitama, Keneki Ken, Meoww")
+								label.text-small Begin type one of Loc, Thanh, Nguyen, Hidan, Sasuke, Naruto, Saitama, Keneki Ken, Meoww
+					.col-xl-6
+						h6 Tag input 
+							small (Input[text] data-role="taginput" data-random-color="true")
+						.form-group.mt-4
+							input(type="text" data-role="taginput" data-random-color="true" value="admin2L, theme, meoww")
+							label.text-small Use 
+								kbd ,
+								|  or 
+								kbd Enter
+								|  to add tags
+					.col-12
+						h6 Textarea 
+							small (Textarea data-role="textarea")
+						.form-group
+							textarea(data-role="textarea" data-chars-counter="#chars_counter" data-chars-counter-template="You enter $1 char(s)")
+							label.text-small#chars_counter &nbsp;
+				h6 Customize
+				.table-container.horizontal-scroll
+					table.table.row-border
+						thead
+							tr
+								th Attribute
+								th Description
+						tbody
+							tr
+								td
+									code data-cls-component
+								td Additional classes for input control.
+							tr
+								td
+									code data-cls-input
+									br
+									code data-cls-prepend
+									br
+									code data-cls-append
+									br
+									code data-cls-clear-button
+									br
+									code data-cls-reveal-button
+									br
+									code data-cls-custom-button
+								td Additional classes for element.
+							tr
+								td
+									code data-chars-counter
+									br
+									small (textarea)
+								td
+									span Element for output text length info
+									br
+									span Default: 
+									code null
+							tr
+								td
+									code data-chars-counter-template
+									br
+									small (textarea)
+								td
+									span Template for output text length info
+									br
+									span Default: 
+									code $1
+							tr
+								td
+									code data-auto-size
+									br
+									small (textarea)
+								td
+									span Auto resize height of textarea when user enter text
+									br
+									span Default: 
+									code true
+				h6 Example
+				input(type="text" data-role="input" placeholder="Custom class Input" data-cls-input="text-bold bg-light text-center" data-clear-button="false")
+	h4 Date & time
+	.row
+		.col-xl-6
+			.bg-white.p-4.mr-2-xl
+				h6 Time picker
+				.form-group.mt-0
+					label.text-small Time picker default
+					input(data-role="timepicker")
+				.form-group.mt-0
+					label.text-small Time picker set value
+					input(data-role="timepicker" data-value="0")
+				.form-group.mt-0
+					label.text-small Time picker custom
+					input(data-role="timepicker" data-distance="1" data-show-labels="false" data-cls-picker="shadow-2" data-cls-hours="no-border bg-blue fg-white" data-cls-minutes="no-border" data-cls-seconds="no-border").time_picker
+				.table-container.horizontal-scroll
+					table.table.row-border
+						thead
+							tr
+								th Attribute
+								th Description
+						tbody
+							tr
+								td
+									code data-hours
+									br
+									code data-minutes
+									br
+									code data-seconds
+									br
+									code data-show-labels
+								td 
+									code true
+									| ,  
+									code false
+							tr
+								td
+									code data-value
+								td
+									span 
+									code hh
+									| ,  
+									code hh:mm
+									| ,  
+									code hh:mm:ss
+							tr
+								td
+									code data-distance
+								td
+									span Set scroll size.
+									br
+									small Type: 
+										code number
+							tr
+								td
+									code data-cls-picker
+									br
+									code data-cls-part
+									br
+									code data-cls-hours
+									br
+									code data-cls-minutes
+									br
+									code data-cls-seconds
+								td
+									span Additional classes for element.
+		.col-xl-6
+			.bg-white.p-4.mr-2-xl
+				h6 Date picker
+				.form-group.mt-0
+					label.text-small Date picker default
+					input(data-role="datepicker")
+				.form-group.mt-0
+					label.text-small Date picker set value 
+						span.fg-blue (data-format="%B, %d %Y")
+					input(data-role="datepicker" data-value="2019-09-19" data-on-set="myLib.date.set" data-format="%B, %d %Y")
+					label.text-small Format value: 
+						span#value_datepicker
+					script.
+						var myLib = {
+							date: {
+								set: function() {
+									document.getElementById('value_datepicker').innerHTML = this.value;
+								}
+							}
+						}
+				.form-group.mt-0
+					label.text-small Date picker custom
+					input(data-role="datepicker" data-distance="1" data-cls-picker="shadow-2" data-cls-day="no-border bg-blue fg-white" data-cls-month="no-border" data-cls-year="no-border").date_picker
+				.table-container.horizontal-scroll
+					table.table.row-border
+						thead
+							tr
+								th Attribute
+								th Description
+						tbody
+							tr
+								td
+									code data-day
+									br
+									code data-month
+									br
+									code data-year
+								td
+									code true
+									| ,  
+									code false
+							tr
+								td
+									code data-value
+								td
+									span 
+										code YYYY
+										| ,  
+										code YYYY-MM
+										| ,  
+										code YYYY-MM-DD
+							tr
+								td
+									code data-format
+								td
+									span Set format value. (Read about valid date format 
+										a(href="https://www.w3.org/TR/NOTE-datetime") this
+										| )
+									br
+									span Example: 
+									br
+									code %Y-%m-%d
+									br
+									code %d-%m-%Y
+									br
+									code %B %b, %d %Y
+							tr
+								td
+									code data-min-year
+									br
+									code data-max-year
+								td
+									code number
+							tr
+								td
+									code data-distance
+								td
+									span Set scroll size.
+									br
+									small Type: 
+										code number
+							tr
+								td
+									code data-cls-picker
+									br
+									code data-cls-part
+									br
+									code data-cls-day
+									br
+									code data-cls-month
+									br
+									code data-cls-year
+								td
+									span Additional classes for element.
+		.col-xl-6
+			.bg-white.p-4.mr-2-xl
+				h6 Calendar
+				div(data-role="calendar")
+				.table-container.horizontal-scroll
+					table.table.row-border
+						thead
+							tr
+								th Attribute
+								th Description
+						tbody
+							tr
+								td
+									code data-wide
+								td
+									code true
+									| ,  
+									code false
+							tr
+								td
+									code data-wide-point
+								td
+									code fs
+									| ,  
+									code sm
+									| ,  
+									code md
+									| ,  
+									code lg
+									| ,  
+									code xl
+									| ,  
+									code xxl
+							tr
+								td
+									code data-week-start
+								td
+									code 0
+									| ,  
+									code 1
+							tr
+								td
+									code data-multi-select
+								td
+									code true
+									| ,  
+									code false
+							tr
+								td
+									code data-picker-mode
+								td
+									code true
+									| ,  
+									code false
+							tr
+								td
+									code data-buttons
+								td
+									code fasle
+									| or  
+									code cancel, today, clear, done
+		.col-xl-6
+			.bg-white.p-4.mr-2-xl
+				h6 Calendar picker
+				input(type="text" data-role="calendarpicker" value="2019/09/19" data-format="%d/%m/%Y")
+				.table-container.horizontal-scroll
+					table.table.row-border
+						thead
+							tr
+								th Attribute
+								th Description
+						tbody
+							tr
+								td
+									code data-size
+								td px / %
+							tr
+								td
+									code data-cls-calendar
+								td compact
+							tr
+								td
+									code data-calendar-wide-point
+								td
+									code fs
+									| ,  
+									code sm
+									| ,  
+									code md
+									| ,  
+									code lg
+									| ,  
+									code xl
+									| ,  
+									code xxl
+							tr
+								td
+									code data-clear-button
+								td
+									code true
+									| ,  
+									code false
+							tr
+								td
+									code data-clear-button-icon
+								td Icon for clear button
+							tr
+								td
+									code data-clear-calendar-button-icon
+								td Icon for show calendar button
+							tr
+								td
+									code data-cls-picker
+								td Additional class for Calendar Picker
+							tr
+								td
+									code data-years-before
+									br
+									code data-years-after
+								td Years before/after today
+							tr
+								td
+									code data-show-header
+								td
+									span Default:  
+									code true
+							tr
+								td
+									code data-cls-today
+									br
+									code data-cls-selected
+									br
+									code data-cls-calendar
+									br
+									code data-cls-calendar-header
+									br
+									code data-cls-calendar-content
+									br
+									code data-cls-calendar-months
+									br
+									code data-cls-calendar-years
+								td
+									span Additional class for elements.
+		.col-xl-6
+			h4 Countdown
+			.bg-white.p-4.mr-2-xl
+				div
+					div(data-role="countdown" data-hours="25")#countdown_methods
+					button(onclick="$('#countdown_methods').data('countdown').start()").button.mt-2 Continue
+					button(onclick="$('#countdown_methods').data('countdown').stop()").button.mt-2 Stop
+					button(onclick="$('#countdown_methods').data('countdown').pause()").button.mt-2 Pause
+					button(onclick="alert($('#countdown_methods').data('countdown').getBreakpoint(true))").button.mt-2 Breakpoint
+					button(onclick="alert($('#countdown_methods').data('countdown').getLeft().minutes)").button.mt-2 Minutes left
+				.table-container.horizontal-scroll
+					table.table.row-border
+						thead
+							tr
+								th Attribute
+								th Description
+						tbody
+							tr
+								td
+									code data-date
+								td
+									span Set start point interval
+									br
+									span Format:  
+									code dd/mm/yyyy
+									br
+									span Default:  
+									code Now
+							tr
+								td
+									code data-days
+									br
+									code data-hours
+									br
+									code data-minutes
+									br
+									code data-seconds
+								td Add days, hours, minutes, seconds to interval
+							tr
+								td
+									code data-days-label
+									br
+									code data-hours-label
+									br
+									code data-minutes-label
+									br
+									code data-seconds-label
+								td Set label for days, hours, minutes, seconds
+							tr
+								td
+									code data-cls-days
+									br
+									code data-cls-hours
+									br
+									code data-cls-minutes
+									br
+									code data-cls-seconds
+								td Set additional class for days, hours, minutes, seconds
+							tr
+								td
+									code data-cls-zero
+								td Set label for days, hours, minutes, seconds
+							tr
+								td
+									code data-cls-alarm
+								td Set additional class for alarm state
+							tr
+								td(colspan="2")
+									span.h6.text-bold Methods
+							tr
+								td
+									code start()
+								td Start countdown
+							tr
+								td
+									code stop()
+								td Stop countdown
+							tr
+								td
+									code pause()
+								td Pause countdown
+							tr
+								td
+									code isPaused()
+								td Return true, if countdown is paused
+							tr
+								td
+									code getTimepoint(asDate)
+								td Return countdown start point
+							tr
+								td
+									code getBreakpoint(asDate)
+								td Return countdown break point
+							tr
+								td
+									code getLeft()
+								td Return object. It contains days, hours, minutes and seconds to stop
+		.col-xl-6
+			h4 Select
+			.bg-white.p-4
+				h6 Select [data-role="select"]
+				.form-group
+					label.text-small Select with placeholder data-filter
+					select(data-role="select" data-filter-placeholder="Search...")
+						optgroup(label="Physical servers")
+							option Core i3 (hp)
+							option(selected="selected") Pentium (hp)
+							option Smart Core i3 (hp)
+						optgroup(label="Virtual hosting")
+							option Mini
+							option Site
+							option Portal
+						optgroup(label="Virtual servers")
+							option eVPS-TEST (30 дней)
+							option eVPS-1
+							option eVPS-2
+				.form-group
+					label.text-small Select without data-filter and no drop-down speed
+					select(data-role="select" data-filter="false" data-duration="0")
+						optgroup(label="Physical servers")
+							option Core i3 (hp)
+							option(selected="selected") Pentium (hp)
+							option Smart Core i3 (hp)
+						optgroup(label="Virtual hosting")
+							option Mini
+							option Site
+							option Portal
+						optgroup(label="Virtual servers")
+							option eVPS-TEST (30 дней)
+							option eVPS-1
+							option eVPS-2
+				.form-group
+					label.text-small Multi select
+					select(data-role="select" multiple data-filter="false" data-duration="0")
+						optgroup(label="Physical servers")
+							option Core i3 (hp)
+							option(selected="selected") Pentium (hp)
+							option Smart Core i3 (hp)
+						optgroup(label="Virtual hosting")
+							option Mini
+							option Site
+							option Portal
+						optgroup(label="Virtual servers")
+							option eVPS-TEST (30 дней)
+							option eVPS-1
+							option eVPS-2
+				h6 Custom
+				.form-group
+					label.text-small Add icon to option
+					select(data-role="select")
+						optgroup(label="Group 1")
+							option(data-template="<span class='mdi mdi-account-check icon'></span> $1") mdi-account-check
+							option(data-template="<span class='mdi mdi-shape icon'></span> $1" selected="selected") mdi-shape
+							option(data-template="<span class='mdi mdi-electron-framework icon'></span> $1" selected="selected") mdi-electron-framework
+						optgroup(label="Group 2")
+							option(data-template="<span class='mdi mdi-account-box-multiple-outline icon'></span> $1") mdi-account-box-multiple-outline
+							option(data-template="<span class='mdi mdi-fruit-pineapple icon'></span> $1") mdi-fruit-pineapple
+							option(data-template="<span class='mdi mdi-island icon'></span> $1") mdi-island
+					select(data-role="select" multiple).mt-4
+						optgroup(label="Group 1")
+							option(data-template="<span class='mdi mdi-account-check icon'></span> $1") mdi-account-check
+							option(data-template="<span class='mdi mdi-shape icon'></span> $1" selected="selected") mdi-shape
+							option(data-template="<span class='mdi mdi-electron-framework icon'></span> $1" selected="selected") mdi-electron-framework
+						optgroup(label="Group 2")
+							option(data-template="<span class='mdi mdi-account-box-multiple-outline icon'></span> $1") mdi-account-box-multiple-outline
+							option(data-template="<span class='mdi mdi-fruit-pineapple icon'></span> $1") mdi-fruit-pineapple
+							option(data-template="<span class='mdi mdi-island icon'></span> $1") mdi-island

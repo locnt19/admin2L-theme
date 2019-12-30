@@ -30,11 +30,6 @@ gulp.task('public', function (done) {
   gulp.src(_librariesUI.fonts).pipe(gulp.dest('./dist/fonts'))
   gulp.src('bower_components/metro/build/mif/*').pipe(gulp.dest('./dist/mif'))
   gulp.src('bower_components/flag-icon-css/flags/**/*').pipe(gulp.dest('./dist/flags'))
-
-  // ChartJS
-  gulp.src('bower_components/chart.js/dist/Chart.min.css').pipe(gulp.dest('./dist/css'));
-  gulp.src('bower_components/chart.js/dist/Chart.min.js').pipe(gulp.dest('./dist/js'));
-
   done();
 })
 
