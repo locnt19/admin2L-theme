@@ -2,3 +2,37 @@
 	.time_picker .time-wrapper,
 	.date_picker .date-wrapper
 			border: none
+	.custom_checkbox
+		input[type=checkbox]
+			&:checked~.check
+					background: #00aff0 !important
+		.check
+			border-color: #00aff0 !important
+		&2
+			.check
+				border-color: #00aff0 !important
+				&::before
+					border-color: #00aff0 !important
+	.custom_radio
+		input[type=radio]
+			&:checked~.check
+					background: #00aff0 !important
+		.check
+			border-color: #00aff0 !important
+		&2
+			.check
+				border-color: #00aff0 !important
+				&::before
+					border-color: #00aff0 !important
+					background: #00aff0 !important
+	.custom_switch
+		.check
+			border-color: #00aff0 !important
+			&::after
+				background: #00aff0!important
+				border-color: #00aff0!important
+		input[type="checkbox"]:checked ~ .check
+			background: #00aff0!important
+		input[type="checkbox"]:checked ~ .check::after
+				border-color: #ffffff!important
+				background: #ffffff!important

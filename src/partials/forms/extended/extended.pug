@@ -2,7 +2,7 @@ aside.forms_extended
 	h4 Input
 	.row
 		.col-12
-			.bg-white.p-4.mr-2-xl
+			.bg-white.p-4
 				h6 Input[text] data-role="input"
 				.row.flex-align-end
 					.form-group.col-sm-6.mt-0
@@ -75,7 +75,7 @@ aside.forms_extended
 							label.text-small#chars_counter &nbsp;
 				h6 Customize
 				.table-container.horizontal-scroll
-					table.table.row-border
+					table.table.row-border.mt-0
 						thead
 							tr
 								th Attribute
@@ -134,7 +134,7 @@ aside.forms_extended
 	h4 Date & time
 	.row
 		.col-xl-6
-			.bg-white.p-4.mr-2-xl
+			.bg-white.p-4
 				h6 Time picker
 				.form-group.mt-0
 					label.text-small Time picker default
@@ -197,7 +197,7 @@ aside.forms_extended
 								td
 									span Additional classes for element.
 		.col-xl-6
-			.bg-white.p-4.mr-2-xl
+			.bg-white.p-4
 				h6 Date picker
 				.form-group.mt-0
 					label.text-small Date picker default
@@ -291,7 +291,7 @@ aside.forms_extended
 								td
 									span Additional classes for element.
 		.col-xl-6
-			.bg-white.p-4.mr-2-xl
+			.bg-white.p-4
 				h6 Calendar
 				div(data-role="calendar")
 				.table-container.horizontal-scroll
@@ -352,7 +352,7 @@ aside.forms_extended
 									| or  
 									code cancel, today, clear, done
 		.col-xl-6
-			.bg-white.p-4.mr-2-xl
+			.bg-white.p-4
 				h6 Calendar picker
 				input(type="text" data-role="calendarpicker" value="2019/09/19" data-format="%d/%m/%Y")
 				.table-container.horizontal-scroll
@@ -435,7 +435,7 @@ aside.forms_extended
 									span Additional class for elements.
 		.col-xl-6
 			h4 Countdown
-			.bg-white.p-4.mr-2-xl
+			.bg-white.p-4
 				div
 					div(data-role="countdown" data-hours="25")#countdown_methods
 					button(onclick="$('#countdown_methods').data('countdown').start()").button.mt-2 Continue
@@ -600,3 +600,95 @@ aside.forms_extended
 							option(data-template="<span class='mdi mdi-account-box-multiple-outline icon'></span> $1") mdi-account-box-multiple-outline
 							option(data-template="<span class='mdi mdi-fruit-pineapple icon'></span> $1") mdi-fruit-pineapple
 							option(data-template="<span class='mdi mdi-island icon'></span> $1") mdi-island
+	h4 Keypad and Spinner
+	.bg-white.p-4
+		.row
+			.col-xl-6
+				.form-group
+					label.text-small Keypad
+					input(type="text" data-role="keypad" placeholder="Enter pin" data-key-size="32" data-cls-keypad="info" data-cls-input="fg-red text-bold")
+			.col-xl-6
+				.form-group
+					label.text-small Spinner
+					input(type="text" data-role="spinner" data-min-value="0" data-max-value="100" 
+					data-plus-icon="<span class='mif-arrow-up'></span>" 
+					data-minus-icon="<span class='mif-arrow-down'></span>" 
+					data-cls-spinner-button="fg-white"
+					data-cls-spinner-button-plus="bg-green" 
+					data-cls-spinner-button-minus="bg-red" 
+					data-cls-spinner-input="fg-blue text-bold")
+	h4 Checkbox, Radio and Switch
+	.row
+		.col-xl-4
+			.bg-white.p-4
+				h6 Checkbox
+				.form-group
+					input(type="checkbox" data-role="checkbox")
+					input(type="checkbox" data-role="checkbox" checked)
+					input(type="checkbox" data-role="checkbox" disabled)
+					input(type="checkbox" data-role="checkbox" disabled checked)
+					input(type="checkbox" data-role="checkbox" data-indeterminate="true")
+				.form-group
+					input(type="checkbox" data-style="2" data-role="checkbox")
+					input(type="checkbox" data-style="2" data-role="checkbox" checked)
+					input(type="checkbox" data-style="2" data-role="checkbox" disabled)
+					input(type="checkbox" data-style="2" data-role="checkbox" disabled checked)
+					input(type="checkbox" data-style="2" data-role="checkbox" data-indeterminate="true")
+				hr
+				h6 Customize
+				.form-group
+					input(type="checkbox" data-role="checkbox" data-caption="Custom checkbox" data-cls-caption="fg-blue text-bold" data-cls-checkbox="custom_checkbox")
+					br
+					input(type="checkbox" data-role="checkbox" data-style="2" data-caption-position="left" data-caption="Custom checkbox 2" data-cls-caption="fg-blue text-bold" data-cls-checkbox="custom_checkbox2")
+		.col-xl-4
+			.bg-white.p-4
+				h6 Radio
+				.form-group
+					input(type="radio" data-role="radio")
+					input(type="radio" data-role="radio" checked)
+					input(type="radio" data-role="radio" disabled)
+					input(type="radio" data-role="radio" disabled checked)
+				.form-group
+					input(type="radio" data-style="2" data-role="radio" name="radioStyle2")
+					input(type="radio" data-style="2" data-role="radio" name="radioStyle2" checked)
+					input(type="radio" data-style="2" data-role="radio" disabled)
+					input(type="radio" data-style="2" data-role="radio" disabled checked)
+				hr
+				h6 Customize
+				.form-group
+					input(type="radio" data-role="radio" name="radioStyle3" data-caption="Custom radio" data-cls-caption="fg-blue text-bold" data-cls-radio="custom_radio")
+					input(type="radio" data-role="radio" name="radioStyle3" data-caption="Custom radio" data-cls-caption="fg-blue text-bold" data-cls-radio="custom_radio")
+					br
+					input(type="radio" data-role="radio" name="radioStyle4" data-style="2" data-caption="Custom radio 2" data-cls-caption="fg-blue text-bold" data-cls-radio="custom_radio2")
+					input(type="radio" data-role="radio" name="radioStyle4" data-style="2" data-caption="Custom radio 2" data-cls-caption="fg-blue text-bold" data-cls-radio="custom_radio2")
+		.col-xl-4
+			.bg-white.p-4
+				h6 Switch
+				.form-group
+					input(type="checkbox" data-role="switch")
+					input(type="checkbox" data-role="switch" checked)
+					input(type="checkbox" data-role="switch" disabled)
+					input(type="checkbox" data-role="switch" disabled checked)
+				.form-group
+					input(type="checkbox" data-material="true" data-role="switch")
+					input(type="checkbox" data-material="true" data-role="switch" checked)
+					input(type="checkbox" data-material="true" data-role="switch" disabled)
+					input(type="checkbox" data-material="true" data-role="switch" disabled checked)
+				hr
+				h6 Customize
+				.form-group
+					input(type="checkbox" data-role="switch" data-cls-switch="custom_switch" data-caption="Custom switch" data-cls-caption="fg-blue text-bold")
+	h4 Rating
+	.row
+		.col-xl-6
+			.bg-white.p-4
+				h6 Default
+				.form-group
+					input(data-role="rating")
+					input(data-role="rating" data-value="3.5" data-star-color="cyan" data-stared-color="cyan")
+		.col-xl-6
+			.bg-white.p-4
+				h6 Default
+				.form-group
+					input(data-role="rating" data-value="2.5" data-static="true" data-message="(3659)")
+					input(data-role="rating" data-value="3.5" data-static="true" data-stared-color="crimson" data-message="(3659)")
