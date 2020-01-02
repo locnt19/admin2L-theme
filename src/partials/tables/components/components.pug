@@ -1,0 +1,152 @@
+aside.tables_components
+	.row
+		.col-12
+			.bg-white.p-4
+				h6.fg-cobalt
+					sup *
+					| Custom layout table
+				.custom_table-wrapper
+					.custom_table-top.d-flex.flex-wrap.flex-nowrap-lg.flex-align-center.flex-justify-center.flex-justify-start-lg.mb-2
+						.custom_table-search.w-100.w-auto-lg.mb-2.mb-0-lg
+						.custom_table-rows.mx-2
+						.custom_table-actions
+							script.
+								function exportTabletoCSV() {
+									$('#table1').data('table').export('CSV', 'all', 'table-export.csv')
+								}
+							button.button.alert(onclick="exportTabletoCSV()")
+								span.mif-file-excel  Export
+							button.button.square(onclick="$('#table1').data('table').toggleInspector()")
+								span.mif-cog
+					table#table1(data-role="table" data-search-wrapper=".custom_table-search" data-rows-wrapper=".custom_table-rows" data-info-wrapper=".custom_table-info" data-pagination-wrapper=".custom_table-pagination" data-pagination-short-mode="true" data-horizontal-scroll="true" data-check="true" data-check-style="2" data-rownum="true").table.table-border.cell-border
+						thead
+							tr
+								th(data-sort-dir="asc" data-format="number" data-name="id").sortable-column ID
+								th(data-name="name").sortable-column Name
+								th(data-format="date" data-format-mask="%d-%m-%y" data-name="start").sortable-column Start
+								th(data-format="int" data-name="age").sortable-column Age
+								th(data-format="money" data-name="salary").sortable-column Salary
+						tbody
+							tr
+								td 1
+								td Bill
+								td 31-12-2017
+								td 63
+								td $7,843
+							tr
+								td 2
+								td Steve
+								td 13-06-2018
+								td 63
+								td $7,843
+							tr
+								td 3
+								td Larry
+								td 31-12-2017
+								td 28
+								td $8,877
+							tr
+								td 4
+								td Troy
+								td 11-03-2019
+								td 26
+								td $5,405
+							tr
+								td 5
+								td Kennedy
+								td 11-02-2018
+								td 60
+								td $5,780
+							tr
+								td 6
+								td Cullen
+								td 23-09-2017
+								td 62
+								td $5,482
+							tr
+								td 7
+								td Eric
+								td 04-01-2019
+								td 53
+								td $6,490
+							tr
+								td 8
+								td Jakeem
+								td 29-06-2018
+								td 18
+								td $6,084
+							tr
+								td 9
+								td Kieran
+								td 11-04-2019
+								td 18
+								td $5,043
+							tr
+								td 10
+								td Stephen
+								td 23-09-2017
+								td 54
+								td $5,895
+							tr
+								td 11
+								td Cody
+								td 26-03-2018
+								td 65
+								td $8,558
+							tr
+								td 12
+								td Cody
+								td 26-03-2018
+								td 65
+								td $8,558
+							tr
+								td 13
+								td Otto
+								td 26-03-2018
+								td 25
+								td $8,124
+							tr
+								td 14
+								td Timon
+								td 14-12-2017
+								td 39
+								td $5,031
+							tr
+								td 15
+								td Owen
+								td 25-05-2018
+								td 24
+								td $6,595
+							tr
+								td 16
+								td Tobias
+								td 02-03-2019
+								td 21
+								td $7,926
+							tr
+								td 17
+								td Logan
+								td 17-02-2018
+								td 24
+								td $8,062
+							tr
+								td 18
+								td Laith
+								td 02-04-2019
+								td 45
+								td $6,886
+							tr
+								td 19
+								td Damian
+								td 03-01-2018
+								td 35
+								td $9,852
+							tr
+								td 20
+								td Wallace
+								td 22-05-2018
+								td 28
+								td $8,678
+					.custom_table-bottom.d-flex.flex-wrap.flex-nowrap-lg.flex-align-center.flex-justify-center.flex-justify-start-lg.mb-2
+						.custom_table-info.w-100.w-auto-lg.mb-2.mb-0-lg
+						.custom_table-pagination.ml-auto-lg
