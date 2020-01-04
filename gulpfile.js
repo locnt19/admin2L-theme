@@ -5,6 +5,7 @@ const
   sass = require('gulp-sass'),
   cssnano = require('cssnano'),
   babel = require('gulp-babel'),
+  image = require('gulp-image'),
   uglify = require('gulp-terser'),
   rename = require('gulp-rename'),
   concat = require('gulp-concat'),
@@ -24,6 +25,11 @@ gulp.task('clean', function () {
   return del(['./dist']);
 })
 
+// Task clean Images
+gulp.task('clean:images', function () {
+  return del(['./dist/images']);
+})
+
 // Public Something
 gulp.task('public', function (done) {
   // Font icons
@@ -32,6 +38,13 @@ gulp.task('public', function (done) {
   gulp.src('bower_components/flag-icon-css/flags/**/*').pipe(gulp.dest('./dist/flags'))
   done();
 })
+
+// Task Images
+gulp.task('images', function () {
+  return gulp.src('src/assets/**/*')
+    .pipe(image())
+    .pipe(gulp.dest('./dist'));
+});
 
 // Task JS
 gulp.task('js', function () {
@@ -157,6 +170,11 @@ gulp.task('serve', function () {
         './src/scripts/**/*.js',
       ],
       gulp.series('js')
+    ),
+    gulp.watch([
+        'src/assets/**/*'
+      ],
+      gulp.series('clean:images', 'images')
     ).on('change', browserSync.reload)
 })
 
@@ -169,5 +187,6 @@ gulp.task('default', gulp.series(
   'html',
   'css',
   'js',
+  'images',
   'serve'
 ))
