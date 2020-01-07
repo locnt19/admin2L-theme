@@ -1,0 +1,285 @@
+aside.typography_content
+	.row
+		.col-xl-6
+			.bg-white.p-4.h-100.no-scroll
+				h5 Super headlines
+				hr
+				table.table.row-border
+					tbody
+						-for(var i = 4; i > 0; i--)
+							tr
+								td
+									span(class=`display${i}`) .display
+										=`${i}`
+		.col-xl-6.mt-4.mt-0-xl
+			.bg-white.p-4
+				h5 Headlines
+				hr
+				table.table.row-border
+					tbody
+						tr
+							td
+								code &lt;h1&gt;
+							td.h1.d-none.d-block-sm .h1 Heading
+							td 48px
+						tr
+							td
+								code &lt;h2&gt;
+							td.h2.d-none.d-block-sm .h2 Heading
+							td 32px
+						tr
+							td
+								code &lt;h3&gt;
+							td.h3.d-none.d-block-sm .h3 Heading
+							td 28px
+						tr
+							td
+								code &lt;h4&gt;
+							td.h4.d-none.d-block-sm .h4 Heading
+							td 24px
+						tr
+							td
+								code &lt;h5&gt;
+							td.h5.d-none.d-block-sm .h5 Heading
+							td 20px
+						tr
+							td
+								code &lt;h6&gt;
+							td.h6.d-none.d-block-sm .h6 Heading
+							td 18px
+		.col-xl-6.mt-4.mt-0-xl
+			.bg-white.p-4
+				h5 Heading secondary text
+				hr
+				table.table.row-border
+					tbody
+						tr
+							td
+								code &lt;h1&gt;
+							td
+								h1 Header 
+									small Secondary
+						tr
+							td
+								code &lt;h2&gt;
+							td
+								h2 Header 
+									small Secondary
+						tr
+							td
+								code &lt;h3&gt;
+							td
+								h3 Header 
+									small Secondary
+						tr
+							td
+								code &lt;h4&gt;
+							td
+								h4 Header 
+									small Secondary
+						tr
+							td
+								code &lt;h5&gt;
+							td
+								h5 Header 
+									small Secondary
+						tr
+							td
+								code &lt;h6&gt;
+							td
+								h6 Header 
+									small Secondary
+		.col-xl-6.mt-4.mt-0-xl
+			.bg-white.p-4.h-100
+				h5 Heading secondary text
+				hr
+				p You can use the mark tag to 
+					mark highlight
+					|  text.
+				p
+					del This line of text is meant to be treated as deleted text.
+				p
+					s This line of text is meant to be treated as no longer accurate.
+				p
+					ins This line of text is meant to be treated as an addition to the document.
+				p
+					u This line of text will render as underlined
+				p
+					small This line of text is meant to be treated as fine print.
+				p
+					strong This line rendered as bold text.
+				p
+					em This line rendered as italicized text.
+		.col-xl-12.mt-4.mt-0-xl
+			.bg-white.p-4
+				h5 Paragraph
+				hr
+				.row
+					.col-xl-12
+						h6 Default
+						p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+						p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					.col-xl-12
+						h6 Indent
+						p.indent Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					.col-xl-12
+						h6 Indent letter
+						p.indent-letter Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					.col-xl-6
+						h6 Leader
+						p.text-leader Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					.col-xl-6
+						h6 Leader2
+						p.text-leader2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					.col-xl-6
+						h6 Secondary
+						p.text-secondary Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+					.col-xl-6
+						h6 Small
+						p.text-small Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+		.col-xl-4.mt-4.mt-0-xl
+			.bg-white.p-4
+				h5 Blockquote
+				blockquote
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					small Someone famous
+						cite(title="Source Title") Source Title
+				blockquote.right-side
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					small Someone famous
+						cite(title="Source Title") Source Title
+		.col-xl-4.mt-4.mt-0-xl
+			.bg-white.p-4.h-100
+				h5 Text transform
+				hr
+				p.text-lower text-lower
+				p.text-upper text-upper
+				p.text-cap text-cap
+		.col-xl-4.mt-4.mt-0-xl
+			.bg-white.p-4.h-100
+				h5 Text alignment
+				hr
+				p.text-left Left aligned text on all viewport sizes.
+				p.text-center Center aligned text on all viewport sizes.
+				p.text-right Right aligned text on all viewport sizes.
+		.col-xl-6.mt-4.mt-0-xl
+			.bg-white.p-4
+				h5 Remark
+				hr
+				.d-flex.flex-wrap
+					.m-1.remark.ml-0 Lorem Ipsum is simply dummy text.
+					.m-1.remark.alert Lorem Ipsum is simply dummy text.
+					.m-1.remark.success Lorem Ipsum is simply dummy text.
+					.m-1.remark.info Lorem Ipsum is simply dummy text.
+					.m-1.remark.warning Lorem Ipsum is simply dummy text.
+					.m-1.remark.primary Lorem Ipsum is simply dummy text.
+					.m-1.remark.secondary Lorem Ipsum is simply dummy text.
+					.m-1.remark.dark Lorem Ipsum is simply dummy text.
+					.m-1.remark.yellow Lorem Ipsum is simply dummy text.
+		.col-xl-6.mt-4.mt-0-xl
+			.bg-white.p-4.h-100
+				h5 Font weight
+				hr
+				table.table.striped.row-border
+					thead
+						tr
+							th Name
+							th Weight
+					tbody
+						tr
+							td.text-ultralight .text-ultralight
+							td 100
+						tr
+							td.text-light .text-light
+							td 200
+						tr
+							td.text-normal .text-normal
+							td 400
+						tr
+							td.text-medium .text-medium
+							td 500
+						tr
+							td.text-bold .text-bold
+							td 700
+		.col-xl-6.mt-4.mt-0-xl
+			.bg-white.p-4
+				h5 Description vertical
+				hr
+				dl
+					dt Description lists
+					dd A description list is perfect for defining terms.
+					dd Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur exercitationem eveniet quaerat sapiente at dicta quidem neque omnis modi accusantium.
+					dt Description lists
+					dd A description list is perfect for defining terms.
+					dd Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur exercitationem eveniet quaerat sapiente at dicta quidem neque omnis modi accusantium.
+			.bg-white.p-4.mt-6.mt-3-xl
+				h5 Description horizontal
+				hr
+				dl.horizontal
+					dt Description lists
+					dd A description list is perfect for defining terms.
+					dd Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur exercitationem eveniet quaerat sapiente at dicta quidem neque omnis modi accusantium.
+					dt Description lists
+					dd A description list is perfect for defining terms.
+					dd Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur exercitationem eveniet quaerat sapiente at dicta quidem neque omnis modi accusantium.
+		.col-xl-6.mt-4.mt-0-xl
+			.bg-white.p-4.h-100
+				h5 Un-styled list
+				hr
+				ul.unstyled-list
+					li Lorem ipsum dolor sit amet.
+					li Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					li Lorem ipsum dolor sit.
+						ul.unstyled-list
+							li Lorem ipsum dolor sit amet.
+							li Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					li Lorem ipsum dolor sit amet consectetur adipisicing.
+				h5.mt-10-xl Inline list
+				hr
+				ul.inline-list
+					li Dashboard
+					li Forms
+					li Tables
+					li UI Elements
+					li Wizards
+		.col-xl-4.mt-4.mt-0-xl
+			.bg-white.p-4
+				h5 Ordered list
+				hr
+				ol
+					li Lorem ipsum dolor sit amet.
+					li Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					li Lorem ipsum dolor sit.
+						ol
+							li Lorem ipsum dolor sit amet.
+							li Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					li Lorem ipsum dolor sit amet consectetur adipisicing.
+		.col-xl-4.mt-4.mt-0-xl
+			.bg-white.p-4
+				h5 Unordered list
+				hr
+				ul
+					li Lorem ipsum dolor sit amet.
+					li Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					li Lorem ipsum dolor sit.
+						ul
+							li Lorem ipsum dolor sit amet.
+							li Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					li Lorem ipsum dolor sit amet consectetur adipisicing.
+		.col-xl-4.mt-4.mt-0-xl
+			.bg-white.p-4
+				h5 Step list
+				hr
+				ul.step-list
+					li
+						h6 First step
+						p Lorem ipsum dolor sit amet.
+					li
+						h6 Second step
+						p Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+					li
+						h6 Third step
+						p Lorem ipsum dolor sit.
+					li
+						h6 Four step
+						p Lorem ipsum dolor sit amet consectetur adipisicing.

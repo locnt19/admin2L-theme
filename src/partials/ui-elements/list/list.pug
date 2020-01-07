@@ -1,0 +1,76 @@
+.d-flex.flex-justify-center.flex-wrap.m-2
+	button(onclick="$('#paintings').data('list').sorting('painting-price','asc',true)").button.m-1 Price
+		span.mif-arrow-up
+	button(onclick="$('#paintings').data('list').sorting('painting-price','desc',true)").button.m-1 Price
+		span.mif-arrow-down
+	button(onclick="$('#paintings').data('list').sorting('painting-author','asc',true)").button.m-1 Author
+		span.mif-arrow-up
+	button(onclick="$('#paintings').data('list').sorting('painting-author','desc',true)").button.m-1 Author
+		span.mif-arrow-down
+	button(onclick="$('#paintings').data('list').sorting('painting-name','asc',true)").button.m-1 Name
+		span.mif-arrow-up
+	button(onclick="$('#paintings').data('list').sorting('painting-name','desc',true)").button.m-1 Name
+		span.mif-arrow-down
+.w-100.row.flex-justify-center
+	.col-6.mx-auto
+		h5 Filter
+		select(data-role="select" data-filter="false" data-prepend="Paints By:" data-on-change="$('#paintings').data('list').filter(this.value)")
+			option(value="") All
+			option(value="gogen") Gogen
+			option(value="sezann") Sezann
+			option(value="bacon") Bacon
+			option(value="klimt") Klimt
+			option(value="munk") Munk
+			option(value="picasso") Picasso
+			option(value="kuning") Kuning
+
+ul(id="paintings" data-role="list" data-sort-class="painting-price" data-filter-class="painting-author" data-sort-dir="desc" data-cls-list="unstyled-list row flex-justify-center mt-4" data-cls-list-item="col-sm-6 col-md-4")
+	li
+		figure.text-center
+			.img-container.thumbnail
+				img( src="images/kuning.jpg" alt="Kunning, Woman III")
+			figcaption.painting-name Woman III / figcaption 
+			figcaption.painting-author.text-bold Kuning / figcaption 
+			figcaption(data-format="money").painting-price $ 130M
+	li
+		figure.text-center
+			.img-container.thumbnail
+				img(src='images/picasso.jpg', alt='Picasso, Nude, green leaves and bust')
+			figcaption.painting-name Nude, green leaves and bust
+			figcaption.painting-author.text-bold Picasso
+			figcaption(data-format='money').painting-price $ 106M
+	li
+		figure.text-center
+			.img-container.thumbnail
+				img(src='images/munk.jpg', alt='Munk, The Scream')
+			figcaption.painting-name The Scream
+			figcaption.painting-author.text-bold Munk
+			figcaption(data-format='money').painting-price $ 119M
+	li
+		figure.text-center
+			.img-container.thumbnail
+				img(src='images/kuning.jpg', alt='Kunning, Woman III')
+			figcaption.painting-name Woman III
+			figcaption.painting-author.text-bold Kuning
+			figcaption(data-format='money').painting-price $ 137M
+	li
+		figure.text-center
+			.img-container.thumbnail
+				img(src='images/klimt.jpg', alt='Klimt, Gold Adele')
+			figcaption.painting-name Gold Adele
+			figcaption.painting-author.text-bold Klimt
+			figcaption(data-format='money').painting-price $ 135M
+	li
+		figure.text-center
+			.img-container.thumbnail
+				img(src='images/gogen.jpg', alt='Gogen, When is the wedding')
+			figcaption.painting-name When is the wedding
+			figcaption.painting-author.text-bold Gogen
+			figcaption(data-format='money').painting-price $ 300M
+	li
+		figure.text-center
+			.img-container.thumbnail
+				img(src='images/sezann.jpg')
+			figcaption.painting-name Players in cards
+			figcaption.painting-author.text-bold Sezann
+			figcaption(data-format='money').painting-price $ 250M

@@ -1,0 +1,112 @@
+aside.treeview_content
+	h4 TreeView
+	.row
+		.col-md-3
+			.bg-white.p-4.h-100
+				h5 Default
+				ul(data-role="treeview")
+					li Favorites
+						ul
+							li Projects
+							li Downloads
+							li Desktop
+					li OneDrive
+						ul
+							li Documents
+							li Projects
+								ul
+									li Web
+									li Windows
+									li Android
+									li iOS
+		.col-md-3
+			.bg-white.p-4.h-100
+				h5 Icons
+				ul(data-role="treeview")
+					li(data-icon="<span class='mif-star-full fg-red'></span>" data-caption="Favorites")
+						ul
+							li(data-icon="<span class='mif-library fg-green'></span>" data-caption="Projects")
+							li(data-icon="<span class='mif-download fg-cyan'></span>" data-caption="Downloads")
+							li(data-icon="<img src='images/desktop.png'>" data-caption="Desktop")
+					li(data-icon="<span class='mif-onedrive'></span>" data-caption="OneDrive")
+						ul
+							li(data-caption="Documents")
+							li(data-caption="Projects" data-collapsed="true")
+								ul
+									li(data-caption="Web")
+									li(data-caption="Android")
+									li(data-caption="Windows")
+									li(data-caption="iOS")
+		.col-md-3
+			.bg-white.p-4.h-100
+				h5 Inputs
+				ul(data-role="treeview")
+					li(data-caption="Checkboxes").expanded
+						ul
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="Play animation")
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="Play sound" checked)
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="Disabled" disabled)
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="Disabled checked" checked disabled)
+					li(data-caption="Radios").expanded
+						ul
+							li
+								input(type="radio" name="r1" data-role="radio" data-caption="Play animation")
+							li
+								input(type="radio" name="r1" data-role="radio" data-caption="Play sound" checked)
+							li
+								input(type="radio" data-role="radio" data-caption="Disabled" disabled)
+							li
+								input(type="radio" data-role="radio" data-caption="Disabled checked" checked disabled)
+					li(data-caption="Switches").expanded
+						ul
+							li
+								input(type="checkbox" data-role="switch" data-caption="Play animation")
+							li
+								input(type="checkbox" data-role="switch" data-caption="Play sound" checked)
+							li
+								input(type="checkbox" data-role="switch" data-caption="Disabled" disabled)
+							li
+								input(type="checkbox" data-role="switch" data-caption="Disabled checked" checked disabled)
+					li(data-caption="Inputs").expanded
+						ul
+							li
+								input(type="text" data-role="input")
+							li
+								select(data-role="select")
+									option(value="1") Value 1
+									option(value="2") Value 2
+									option(value="3") Value 3
+							li
+								textarea(data-role="textarea")
+		.col-md-3
+			.bg-white.p-4.h-100
+				h5 Options tree
+				ul(data-role="treeview")
+					li
+						input(type="checkbox" data-role="checkbox" data-caption="Play video")
+						ul
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="AVI")
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="MPEG")
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="VIDX")
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="MP4" checked)
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="XVID")
+					li
+						input(type="checkbox" data-role="checkbox" data-caption="Play audio")
+					li
+						input(type="checkbox" data-role="checkbox" data-caption="Subtitles")
+						ul
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="English" checked)
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="Ukrainian")
+							li
+								input(type="checkbox" data-role="checkbox" data-caption="Dutch")

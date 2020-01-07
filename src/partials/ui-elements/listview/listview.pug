@@ -1,0 +1,36 @@
+aside.listview_content
+	h4 List / Grid view
+	.row
+		.col-12
+			.bg-white.p-4
+				script.
+					// Get the elements with class="listview-col"
+					var elements = document.getElementsByClassName("listview-col");
+					// Declare a loop variable
+					var i;
+					// List View
+					function listView() {
+						for (i = 0; i < elements.length; i++) {
+							elements[i].style.maxWidth = "100%";
+							elements[i].style.flexBasis = "100%";
+						}
+					}
+					// Grid View
+					function gridView() {
+						for (i = 0; i < elements.length; i++) {
+							elements[i].style = null;
+						}
+					}
+				button(onclick='listView()').button.outline.dark
+					span.mif-list2
+					span  List
+				button(onclick='gridView()').button.outline.dark
+					span.mif-apps
+					span  Grid
+				.listview-container
+					.listview-row
+						-for(var i = 0; i < 6; i++)
+							.listview-col.col-md-4
+								h5 Title 
+									span= `${i}`
+								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, a minus. Velit quaerat, officiis laudantium quis reiciendis accusamus ut? Cumque adipisci mollitia distinctio enim, nisi nesciunt ullam quasi voluptates. Temporibus?

@@ -1,0 +1,393 @@
+aside.buttons_content
+	h4 Push button
+	.row
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 Super headlines
+				div
+					button.mt-1.button default
+					button.mt-1.button.primary primary
+					button.mt-1.button.success success
+					button.mt-1.button.alert alert
+					button.mt-1.button.warning warning
+					button.mt-1.button.yellow yellow
+					button.mt-1.button.info info
+					button.mt-1.button.dark dark
+					button.mt-1.button.light light
+					button.mt-1.button.link link
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 With icon
+				div
+					button.mt-1.button
+						span.mif-checkmark
+						span  Font icon
+					button.mt-1.button.primary
+						span.mif-users
+					button.mt-1.button
+						img(src="images/checkmark.png", alt="images/checkmark.png")
+						span  Image icon
+					button.mt-1.button
+						img(src="images/keycdn-logo.svg", alt="images/keycdn-logo.svg")
+						span  Svg icon
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 Outline
+				div
+					button.mt-1.button.outline default
+					button.mt-1.button.outline.primary primary
+					button.mt-1.button.outline.success success
+					button.mt-1.button.outline.alert alert
+					button.mt-1.button.outline.warning warning
+					button.mt-1.button.outline.yellow yellow
+					button.mt-1.button.outline.info info
+					button.mt-1.button.outline.dark dark
+					button.mt-1.button.outline.light light
+					button.mt-1.button.outline.link link
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 Shadowed
+				div
+					button.mt-1.button.drop-shadow default
+					button.mt-1.button.drop-shadow.primary primary
+					button.mt-1.button.drop-shadow.success success
+					button.mt-1.button.drop-shadow.alert alert
+					button.mt-1.button.drop-shadow.warning warning
+					button.mt-1.button.drop-shadow.yellow yellow
+					button.mt-1.button.drop-shadow.info info
+					button.mt-1.button.drop-shadow.dark dark
+					button.mt-1.button.drop-shadow.light light
+					button.mt-1.button.drop-shadow.link link
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 Push button size
+				div
+					button.mt-1.button.mini default
+					button.mt-1.button.small.primary primary
+					button.mt-1.button.success success
+					button.mt-1.button.large.alert alert
+				hr
+				h5 Square & cycle buttons
+				div
+					button.mt-1.button.square.mini
+						span.mif-checkmark
+					button.mt-1.button.square.small.primary
+						span.mif-checkmark
+					button.mt-1.button.square.success
+						span.mif-checkmark
+					button.mt-1.button.square.large.alert
+						span.mif-checkmark
+					button.mt-1.button.cycle.mini
+						span.mif-checkmark
+					button.mt-1.button.cycle.small.primary
+						span.mif-checkmark
+					button.mt-1.button.cycle.success
+						span.mif-checkmark
+					button.mt-1.button.cycle.large.alert
+						span.mif-checkmark
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 Image button
+				div
+					button.mt-1.image-button
+						span.mif-checkmark.icon
+						span.caption Image button
+					button.mt-1.image-button.icon-right
+						span.mif-checkmark.icon
+						span.caption Image button
+					button.mt-1.image-button.primary
+						span.mif-checkmark.icon
+						span.caption Image button
+					button.mt-1.image-button.alert
+						span.mif-checkmark.icon
+						span.caption Image button
+					button.mt-1.image-button.outline.primary
+						span.mif-checkmark.icon
+						span.caption Image button
+					button.mt-1.image-button.outline.alert
+						span.mif-checkmark.icon
+						span.caption Image button
+	h4 Dropdown button
+	.row
+		.col-xl-3
+			.bg-white.p-4
+				.dropdown-button
+					button.button.dropdown-toggle Dropdown
+					ul.d-menu(data-role="dropdown")
+						li
+							a(href="#") Reply
+						li
+							a(href="#") Reply all
+						li
+							a(href="#") Forward
+		.col-xl-3
+			.bg-white.p-4(style="min-height:68px")
+				.dropdown-button.place-right
+					button.button.dropdown-toggle Dropdown
+					ul.d-menu(data-role="dropdown")
+						li
+							a(href="#") Reply
+						li
+							a(href="#") Reply all
+						li
+							a(href="#") Forward
+		.col-xl-3
+			.bg-white.p-4
+				.split-button
+					button.button Split
+					button.split.dropdown-toggle
+					ul.d-menu(data-role="dropdown")
+						li
+							a(href="#") Reply
+						li
+							a(href="#") Reply all
+						li
+							a(href="#") Forward
+		.col-xl-3
+			.bg-white.p-4(style="min-height:68px")
+				.split-button.place-right
+					button.button Split
+					button.split.dropdown-toggle
+					ul.d-menu(data-role="dropdown")
+						li
+							a(href="#") Reply
+						li
+							a(href="#") Reply all
+						li
+							a(href="#") Forward
+	h4 Action button
+	.row
+		.col-xl-3
+			.bg-white.p-4.h-100
+				.multi-action.d-block.mx-auto
+					button.action-button.rotate-minus.bg-red.fg-white(onclick="$(this).toggleClass('active')")
+						span.icon
+							span.mif-plus
+					ul.actions.drop-right
+						li.bg-blue
+							a(href="#")
+								span.mif-user-plus
+						li.bg-teal
+							a(href="#")
+								span.mif-library
+						li.bg-pink
+							a(href="#")
+								span.mif-alarm
+						li.bg-orange
+							a(href="#")
+								span.mif-lock
+		.col-xl-3
+			.bg-white.p-4.h-100
+				.multi-action.d-block.mx-auto
+					button.action-button.rotate-minus.bg-yellow.fg-grayMouse(onclick="$(this).toggleClass('active')")
+						span.icon
+							span.mif-plus
+					ul.actions.drop-top
+						li.bg-blue
+							a(href="#")
+								span.mif-user-plus
+						li.bg-teal
+							a(href="#")
+								span.mif-library
+						li.bg-pink
+							a(href="#")
+								span.mif-alarm
+						li.bg-orange
+							a(href="#")
+								span.mif-lock
+		.col-xl-3
+			.bg-white.p-4.h-100
+				.multi-action.d-block.mx-auto
+					button.action-button.rotate-minus.warning(onclick="$(this).toggleClass('active')")
+						span.icon
+							span.mif-plus
+					ul.actions.drop-bottom
+						li.bg-blue
+							a(href="#")
+								span.mif-user-plus
+						li.bg-teal
+							a(href="#")
+								span.mif-library
+						li.bg-pink
+							a(href="#")
+								span.mif-alarm
+						li.bg-orange
+							a(href="#")
+								span.mif-lock
+		.col-xl-3
+			.bg-white.p-4.h-100
+				.multi-action.d-block.mx-auto
+					button.action-button.rotate-minus.bg-blue.fg-white(onclick="$(this).toggleClass('active')")
+						span.icon
+							span.mif-plus
+					ul.actions.drop-left
+						li.bg-blue
+							a(href="#")
+								span.mif-user-plus
+						li.bg-teal
+							a(href="#")
+								span.mif-library
+						li.bg-pink
+							a(href="#")
+								span.mif-alarm
+						li.bg-orange
+							a(href="#")
+								span.mif-lock
+	h4 Pagination
+	.row
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 Default
+				ul.pagination
+					li.page-item.disabled
+						a.page-link(href="#" tabindex="-1") Previous
+					li.page-item.active
+						a.page-link(href="#") 1
+					li.page-item
+						a.page-link(href="#") 2
+					li.page-item.no-link
+						a.page-link(href="#") ...
+					li.page-item
+						a.page-link(href="#") 3
+					li.page-item
+						a.page-link(href="#") 4
+					li.page-item.service
+						a.page-link(href="#") Next
+				ul.pagination.info
+					li.page-item.disabled
+						a.page-link(href="#" tabindex="-1") Previous
+					li.page-item.active
+						a.page-link(href="#") 1
+					li.page-item
+						a.page-link(href="#") 2
+					li.page-item.no-link
+						a.page-link(href="#") ...
+					li.page-item
+						a.page-link(href="#") 3
+					li.page-item
+						a.page-link(href="#") 4
+					li.page-item.service
+						a.page-link(href="#") Next
+				ul.pagination.warning.rounded
+					li.page-item.disabled
+						a.page-link(href="#" tabindex="-1") Previous
+					li.page-item.active
+						a.page-link(href="#") 1
+					li.page-item
+						a.page-link(href="#") 2
+					li.page-item.no-link
+						a.page-link(href="#") ...
+					li.page-item
+						a.page-link(href="#") 3
+					li.page-item
+						a.page-link(href="#") 4
+					li.page-item.service
+						a.page-link(href="#") Next
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 No gaps
+				label.text-small .no-gap
+				ul.pagination.no-gap
+					li.page-item.disabled
+						a.page-link(href="#" tabindex="-1") Previous
+					li.page-item.active
+						a.page-link(href="#") 1
+					li.page-item
+						a.page-link(href="#") 2
+					li.page-item
+						a.page-link(href="#") 3
+					li.page-item
+						a.page-link(href="#") 4
+					li.page-item.service
+						a.page-link(href="#") Next
+				hr
+				h5 Sizing
+				label.text-small .size-lagre
+				ul.pagination.no-gap.size-large
+					li.page-item.disabled
+						a.page-link(href="#" tabindex="-1") Previous
+					li.page-item.active
+						a.page-link(href="#") 1
+					li.page-item
+						a.page-link(href="#") 2
+					li.page-item
+						a.page-link(href="#") 3
+					li.page-item
+						a.page-link(href="#") 4
+					li.page-item.service
+						a.page-link(href="#") Next
+				label.text-small .size-small
+				ul.pagination.no-gap.size-small
+					li.page-item.disabled
+						a.page-link(href="#" tabindex="-1") Previous
+					li.page-item.active
+						a.page-link(href="#") 1
+					li.page-item
+						a.page-link(href="#") 2
+					li.page-item
+						a.page-link(href="#") 3
+					li.page-item
+						a.page-link(href="#") 4
+					li.page-item.service
+						a.page-link(href="#") Next
+		.col-xl-12
+			.bg-white.p-4.h-100
+				h5 Alignment
+				ul.pagination.flex-justify-start
+					li.page-item.disabled
+						a.page-link(href="#" tabindex="-1") Previous
+					li.page-item.active
+						a.page-link(href="#") 1
+					li.page-item
+						a.page-link(href="#") 2
+					li.page-item.no-link
+						a.page-link(href="#") ...
+					li.page-item
+						a.page-link(href="#") 3
+					li.page-item
+						a.page-link(href="#") 4
+					li.page-item.service
+						a.page-link(href="#") Next
+				ul.pagination.flex-justify-center
+					li.page-item.disabled
+						a.page-link(href="#" tabindex="-1") Previous
+					li.page-item.active
+						a.page-link(href="#") 1
+					li.page-item
+						a.page-link(href="#") 2
+					li.page-item.no-link
+						a.page-link(href="#") ...
+					li.page-item
+						a.page-link(href="#") 3
+					li.page-item
+						a.page-link(href="#") 4
+					li.page-item.service
+						a.page-link(href="#") Next
+				ul.pagination.flex-justify-end
+					li.page-item.disabled
+						a.page-link(href="#" tabindex="-1") Previous
+					li.page-item.active
+						a.page-link(href="#") 1
+					li.page-item
+						a.page-link(href="#") 2
+					li.page-item.no-link
+						a.page-link(href="#") ...
+					li.page-item
+						a.page-link(href="#") 3
+					li.page-item
+						a.page-link(href="#") 4
+					li.page-item.service
+						a.page-link(href="#") Next
+	h4 Breadcrumbs
+	.row
+		.col-12
+			.bg-white.p-4
+				ul.breadcrumbs
+					li.page-item
+						a(href="#").page-link Home
+					li.page-item
+						a(href="#").page-link Products
+					li.page-item
+						a(href="#").page-link Downloads
+					li.page-item
+						a(href="#").page-link Windows 10

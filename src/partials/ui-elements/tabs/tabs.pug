@@ -1,0 +1,200 @@
+aside.tabs_content
+	h4 Accordion
+	.row
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 Default
+				div(data-role="accordion" data-show-active="true" data-one-frame="true")
+					.frame.active
+						.heading Header 1
+						.content
+							.p-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nihil similique illo dolores, harum natus repudiandae minus, saepe, corporis dolore labore corrupti rerum error sed fugiat. Excepturi adipisci facilis aut.
+					.frame
+						.heading Header 2
+						.content
+							.p-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nihil similique illo dolores, harum natus repudiandae minus, saepe, corporis dolore labore corrupti rerum error sed fugiat. Excepturi adipisci facilis aut.
+					.frame
+						.heading Header 3
+						.content
+							.p-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nihil similique illo dolores, harum natus repudiandae minus, saepe, corporis dolore labore corrupti rerum error sed fugiat. Excepturi adipisci facilis aut.
+		.col-xl-6
+			.bg-white.p-4.h-100
+				h5 Material
+				div(data-role="accordion" data-material="true" data-show-active="true" data-one-frame="true")
+					.frame.active
+						.heading Header 1
+						.content
+							.p-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nihil similique illo dolores, harum natus repudiandae minus, saepe, corporis dolore labore corrupti rerum error sed fugiat. Excepturi adipisci facilis aut.
+					.frame
+						.heading Header 2
+						.content
+							.p-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nihil similique illo dolores, harum natus repudiandae minus, saepe, corporis dolore labore corrupti rerum error sed fugiat. Excepturi adipisci facilis aut.
+					.frame
+						.heading Header 3
+						.content
+							.p-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nihil similique illo dolores, harum natus repudiandae minus, saepe, corporis dolore labore corrupti rerum error sed fugiat. Excepturi adipisci facilis aut.
+	h4 Tabs
+	.row
+		.col-xl-4
+			.bg-white.p-4.h-100
+				ul(data-role="tabs")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Links
+		.col-xl-4
+			.bg-white.p-4.h-100
+				ul(data-role="tabs" data-expand-point="sm")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Links
+		.col-xl-4
+			.bg-white.p-4.h-100
+				ul(data-role="tabs" data-expand-point="sm" data-tabs-position="bottom")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Links
+		.col-12
+			.bg-white.p-4.h-100
+				ul(data-role="tabs" data-expand-point="sm")
+					li
+						a(href="#_tabs-1") Home
+					li
+						a(href="#_tabs-2") Profile
+					li
+						a(href="#_tabs-3") Links
+					li
+						a(href="#").dropdown-toggle Dropdown
+						ul(data-role="dropdown").d-menu
+							li
+								a(href="#_tabs-4") Tabs 4 content
+					li.disabled
+						a(href="#") Disabled
+				.border.bd-default.no-border-top.p-2
+					#_tabs-1
+						h5 #_tabs-1
+						div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quae ullam ad dolorum tempore laborum minima architecto reiciendis consequuntur totam voluptas quos numquam maiores molestiae quasi doloremque, molestias cumque ipsum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis esse cupiditate saepe numquam ex consequuntur vitae eos quasi ipsam quos atque, minus consectetur, accusantium quidem unde amet. Impedit, unde repudiandae.
+					#_tabs-2
+						h5 #_tabs-2
+						div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quae ullam ad dolorum tempore laborum minima architecto reiciendis consequuntur totam volupt Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptas.
+					#_tabs-3
+						h5 #_tabs-3
+						div Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita quae ullam ad dolorum tempore laborum minima architecto reiciendis consequuntur totam voluptas quos
+					#_tabs-4
+						h5 #_tabs-4
+						div Lorem ipsum dolor sit amet, cons
+		.col-md-6
+			.bg-white.p-4.h-100
+				ul(data-role="tabs" data-tabs-position="vertical" style="max-width: 120px")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Links
+		.col-md-6
+			.bg-white.p-4.h-100
+				ul(data-role="tabs" data-tabs-position="vertical right" style="max-width: 120px")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Links
+		.col-12
+			.bg-white.p-4.h-100
+				h5 Alignment
+				ul(data-cls-tabs="flex-justify-start" data-role="tabs" data-expand-point="sm")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Links
+				ul(data-cls-tabs="flex-justify-center mt-4" data-role="tabs" data-expand-point="sm")
+					li
+						a(href="#") Home
+					li.active
+						a(href="#") Profile
+					li
+						a(href="#") Links
+				ul(data-cls-tabs="flex-justify-end mt-4" data-role="tabs" data-expand-point="sm")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li.active
+						a(href="#") Links
+		.col-12
+			.row(style="min-height: 400px")
+				.col-xl-4
+					.bg-white.p-4.h-100
+						ul(data-role="tabs" data-tabs-position="vertical h-100" style="max-width: 120px")
+							li
+								a(href="#") Home
+							li
+								a(href="#") Profile
+							li
+								a(href="#") Links
+							li.disabled
+								a(href="#") Disabled
+				.col-xl-4
+					.bg-white.p-4.h-100
+						ul(data-role="tabs" data-tabs-position="vertical" data-cls-tabs="flex-justify-center h-100" style="max-width: 120px")
+							li
+								a(href="#") Home
+							li
+								a(href="#") Profile
+							li
+								a(href="#") Links
+							li.disabled
+								a(href="#") Disabled
+				.col-xl-4
+					.bg-white.p-4.h-100
+						ul(data-role="tabs" data-tabs-position="vertical" data-cls-tabs="flex-justify-end h-100" style="max-width: 120px")
+							li
+								a(href="#") Home
+							li
+								a(href="#") Profile
+							li
+								a(href="#") Links
+							li.disabled
+								a(href="#") Disabled
+		.col-xl-4
+			.bg-white.p-4.h-100
+				h5 Tabs type Text
+				ul(data-role="tabs" data-tabs-type="text" data-expand="true")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Links
+		.col-xl-4
+			.bg-white.p-4.h-100
+				h5 Tabs type Group
+				ul(data-role="tabs" data-tabs-type="group" data-expand="true")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Links
+		.col-xl-4
+			.bg-white.p-4.h-100
+				h5 Tabs type Pills
+				ul(data-role="tabs" data-tabs-type="pills" data-expand="true")
+					li
+						a(href="#") Home
+					li
+						a(href="#") Profile
+					li
+						a(href="#") Links
