@@ -437,7 +437,7 @@ aside.forms_extended
 			h4 Countdown
 			.bg-white.p-4
 				div
-					div(data-role="countdown" data-hours="25")#countdown_methods
+					div(data-role="countdown" data-hours="25" data-animate="slide")#countdown_methods
 					button(onclick="$('#countdown_methods').data('countdown').start()").button.mt-2 Continue
 					button(onclick="$('#countdown_methods').data('countdown').stop()").button.mt-2 Stop
 					button(onclick="$('#countdown_methods').data('countdown').pause()").button.mt-2 Pause
@@ -461,6 +461,17 @@ aside.forms_extended
 									br
 									span Default:  
 									code Now
+							tr
+								td
+									code data-animation
+								td
+									span Set animation
+									br
+									code slide
+									br
+									code fade
+									br
+									code zoom
 							tr
 								td
 									code data-days
