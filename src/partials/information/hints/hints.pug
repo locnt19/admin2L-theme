@@ -1,0 +1,108 @@
+section.hints_wrapper
+	//- script run Toast / Notify / Hints
+	script.
+		function runToast(mode) {
+			var toast = Metro.toast.create;
+			switch (mode) {
+				case 'callback': toast("This is a toast with callback", function(){alert('Toast callback executed!');}); break;
+				case 'timeout': toast("This is a toast with timeout 5s", null, 5000); break;
+				case 'class': toast("This is a toast with custom class", null, 5000, "bg-green fg-white"); break;
+				case 'options': toastOptions(); break;
+				default: toast("This is default toast");
+			}
+		}
+
+		function toastClasses(cls){
+			var toast = Metro.toast.create;
+			toast("This is a toast with a predefined class ." + cls, null, 5000, cls);
+		}
+
+		function toastOptions(){
+			var options = {
+				showTop: true,
+				timeout: 3000,
+				distance: 64,
+				clsToast: 'alert'
+			};
+			Metro.toast.create("Toast message", null, null, null, options);
+		}
+
+		function simpleNotify(){
+			return Metro.notify.create('This is a notify', 'Title', {});
+		}
+
+		function setupNotify(){
+			var notify = Metro.notify;
+			notify.setup({
+				width: 300,
+				duration: 1000,
+				animation: 'easeOutBounce'
+			});
+			notify.create("This is a notify", "", {});
+			notify.reset();
+		}
+
+		function classNotify(){
+			var notify = Metro.notify;
+			notify.create("This is a notify with additional class.", null, {
+				cls: "alert"
+			});
+		}
+
+		function keepNotify(){
+			var notify = Metro.notify;
+			notify.create("This is a notify. Click me to close.", null, {
+				keepOpen: true
+			});
+		}
+
+		function callbackNotify(){
+			var notify = Metro.notify;
+			notify.create("This is a notify.", null, {
+				onClose: function(){
+					alert('Hi from notification callback');
+				}
+			});
+		}
+
+	//- Template Toast / Notify / Hints
+	.m-4.p-6.bg-white
+		p.text-leader.text-center Hints, toasts and notifies are used for system messaging.
+	aside.toast_container.p-4
+		h4 Toasts
+		.p-4.bg-white
+			h5.mt-0 General
+			button(onclick="runToast()").button.mt-1 Default toast
+			button(onclick="runToast('callback')").button.mt-1 Toast with a callback
+			button(onclick="runToast('timeout')").button.mt-1 Toast timeout
+			button(onclick="runToast('class')").button.mt-1 Toast custom class
+			button(onclick="runToast('options')").button.mt-1 Toast options
+		.p-4.bg-white.mt-4
+			h5.mt-0 Accent classes
+			button(onclick="toastClasses('primary')").button.mt-1.primary primary
+			button(onclick="toastClasses('secondary')").button.mt-1.secondary secondary
+			button(onclick="toastClasses('success')").button.mt-1.success success
+			button(onclick="toastClasses('alert')").button.mt-1.alert alert
+			button(onclick="toastClasses('warning')").button.mt-1.warning warning
+			button(onclick="toastClasses('yellow')").button.mt-1.yellow yellow
+			button(onclick="toastClasses('info')").button.mt-1.info info
+			button(onclick="toastClasses('light')").button.mt-1.light light
+			button(onclick="toastClasses('dark')").button.mt-1.dark dark
+	aside.notify_container.p-4
+		h4 Notifies
+		.p-4.bg-white
+			h5.mt-0 General
+			button(onclick="simpleNotify()").button.mt-1 Create notify
+			button(onclick="setupNotify()").button.mt-1 setupNotify
+			button(onclick="keepNotify()").button.mt-1 Keep open
+			button(onclick="callbackNotify()").button.mt-1 Callback
+			button(onclick="classNotify()").button.mt-1 Additional classes
+	aside.hint_container.p-4
+		h4 Hints
+		.p-4.bg-white
+			h5.mt-0 General
+			.d-flex.flex-justify-around
+				button(data-role="hint" data-hint-position="right" data-hint-text="This is a hinted button").button.alert.mt-1 right
+				button(data-role="hint" data-hint-position="top" data-hint-text="This is a hinted button").button.primary.mt-1 top
+				button(data-role="hint" data-hint-position="bottom" data-hint-text="This is a hinted button").button.secondary.mt-1 bottom
+				button(data-role="hint" data-hint-position="left" data-hint-text="This is a hinted button").button.yellow.mt-1 left

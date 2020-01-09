@@ -1,0 +1,46 @@
+section.dialog_wrapper
+	aside.dialog_action.bg-white.p-4.mt-4.text-center
+		button(onclick="Metro.dialog.open('#dialog-defined')").button.outline.primary Open pre-defined dialog
+		button(onclick="Metro.dialog.create({title: 'Dialog runtime',content: '<h5>Dialog content</h5><div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque unde accusamus nemo, quae repudiandae est error adipisci maxime eveniet quis! Dolorem dolores ducimus cumque? Aliquid illum repellendus corporis aperiam nostrum.</div>',clsDialog: 'alert',closeButton: true});").button.outline.alert Open runtime dialog
+	div(id="dialog-defined" data-role="dialog" data-close-button="true").dialog
+		.dialog-title Dialog defined
+		.dialog-content
+			h5 Dialog content
+			p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque unde accusamus nemo, quae repudiandae est error adipisci maxime eveniet quis! Dolorem dolores ducimus cumque? Aliquid illum repellendus corporis aperiam nostrum.
+		.dialog-actions
+			button.button.js-dialog-close Close
+			button.button.secondary Disagree
+			button.button.primary Agree
+	aside.dialog_styles
+		h4 Dialog with accent colors
+		.row
+			.col-md-4
+				.dialog.primary.pos-relative
+					.dialog-title Dialog with primary accent
+					.dialog-content
+						h5 Dialog content
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque unde accusamus nemo, quae repudiandae est error adipisci maxime eveniet quis! Dolorem dolores ducimus cumque? Aliquid illum repellendus corporis aperiam nostrum.
+					.dialog-actions
+						button.button.js-dialog-close Close
+						button.button.secondary Disagree
+						button.button.primary Agree
+			.col-md-4
+				.dialog.alert.pos-relative
+					.dialog-title Dialog with alert class
+					.dialog-content
+						h5 Dialog content
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque unde accusamus nemo, quae repudiandae est error adipisci maxime eveniet quis! Dolorem dolores ducimus cumque? Aliquid illum repellendus corporis aperiam nostrum.
+					.dialog-actions
+						button.button.js-dialog-close Close
+						button.button.secondary Disagree
+						button.button.primary Agree
+			.col-md-4
+				.dialog.success.pos-relative
+					.dialog-title Dialog with successc class
+					.dialog-content
+						h5 Dialog content
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque unde accusamus nemo, quae repudiandae est error adipisci maxime eveniet quis! Dolorem dolores ducimus cumque? Aliquid illum repellendus corporis aperiam nostrum.
+					.dialog-actions
+						button.button.js-dialog-close Close
+						button.button.secondary Disagree
+						button.button.primary Agree

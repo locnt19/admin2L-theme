@@ -1,0 +1,30 @@
+section.infobox_wrapper
+	aside.infobox_action.bg-white.p-4.mt-4.text-center
+		button(onclick="$('#infobox-defined').data('infobox').open()").button.outline.primary Open pre-defined dialog
+		button(onclick="var html_content = '<h3>What is Lorem Ipsum?</h3><p>Lorem Ipsum is simply dummy text...</p>'; Metro.infobox.create(html_content, null, { clsBox: 'alert shadow-2' });").button.outline.alert Open runtime dialog
+	div(id="infobox-defined" data-role="infobox")
+		.button.square.closer
+		.info-box-content
+			h5 Dialog content
+			p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque unde accusamus nemo, quae repudiandae est error adipisci maxime eveniet quis! Dolorem dolores ducimus cumque? Aliquid illum repellendus corporis aperiam nostrum.
+	aside.infobox_styles
+		h4 Dialog with accent colors
+		.row
+			.col-md-4
+				.info-box.primary.pos-relative
+					.button.square.closer
+					.info-box-content
+						h5 Dialog content
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque unde accusamus nemo, quae repudiandae est error adipisci maxime eveniet quis! Dolorem dolores ducimus cumque? Aliquid illum repellendus corporis aperiam nostrum.
+			.col-md-4
+				.info-box.alert.pos-relative
+					.button.square.closer
+					.info-box-content
+						h5 Dialog content
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque unde accusamus nemo, quae repudiandae est error adipisci maxime eveniet quis! Dolorem dolores ducimus cumque? Aliquid illum repellendus corporis aperiam nostrum.
+			.col-md-4
+				.info-box.success.pos-relative
+					.button.square.closer
+					.info-box-content
+						h5 Dialog content
+						p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque unde accusamus nemo, quae repudiandae est error adipisci maxime eveniet quis! Dolorem dolores ducimus cumque? Aliquid illum repellendus corporis aperiam nostrum.
